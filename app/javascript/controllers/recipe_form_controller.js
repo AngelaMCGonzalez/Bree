@@ -1,35 +1,37 @@
-import { Controller } from 'stimulus';
+import { Controller } from 'stimulus'
 
 export default class extends Controller {
-  static targets = [
-    'form',
-    'stepInputs',
+  
+  static targets = [ 
+    'form', 
+    'stepInputs', 
     'steps',
     'condiments',
     'condimentInputs',
   ]
 
-  send(e) {
+  send(e){
+
     e.preventDefault();
     this.stepsTarget.value = `{${[...this.buildArray(this.stepInputsTargets)]}}`;
-    this.condimentsTarget.value = `{${[...this.buildArray(this.condimentInputsTargets)]}}`;
-
+    this.condimentsTarget.value = `{${[...this.buildArray(this.condimentInputsTargets)]}}`
+    
     this.formTarget.submit();
   }
 
-  buildArray(collection) {
-    const elements = new Array();
+  buildArray(collection){
+    let elements = new Array();
 
     collection.forEach((el) => {
       elements.push(`"${el.value}"`);
-    });
+    })
 
-    return [...elements];
+    return [...elements]
   }
 
-  arrayToList(array) {
+  arrayToList(array){
     return array
-      .join(', ')
+      .join(", ")
       .replace(/, ((?:.(?!, ))+)$/, ' and $1');
   }
 }

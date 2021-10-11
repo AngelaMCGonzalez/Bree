@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-module Admin
+module Admin  
   module Operations
     class HarrisController < BaseController
       def index

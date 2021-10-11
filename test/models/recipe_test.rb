@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # == Schema Information
 #
 # Table name: recipes
@@ -29,7 +27,7 @@
 #  index_recipes_on_recipe_type       (recipe_type) USING gin
 #  index_recipes_on_steps             (steps) USING gin
 #
-require 'test_helper'
+require "test_helper"
 
 class RecipeTest < ActiveSupport::TestCase
   # test "the truth" do

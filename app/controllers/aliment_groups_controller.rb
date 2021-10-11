@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class AlimentGroupsController < ApplicationController
   def index
     @aliments = load_aliments

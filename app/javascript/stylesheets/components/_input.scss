@@ -1,15 +1,15 @@
-.input{ 
-    @apply mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full border border-gray-300 rounded-md;
+.input-basic{ 
+    @apply mt-1 p-2 ocus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md;
 }
 
-.placeholder {
-    @apply mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full border border-gray-300 rounded-md;
+.input-placeholder {
+    @apply mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md;
 }
 
-.dropdown {
-    @apply mt-1 p-2 h-10 focus:ring-indigo-500 border focus:border-indigo-500 block w-full pl-2 pr-12  border-gray-300 rounded-md;
+.input-dropdown {
+    @apply mt-1  p-2 h-10 focus:ring-indigo-500 border focus:border-indigo-500 block w-full pl-2 pr-12 sm:text-md border-gray-300 rounded-md;
 }
 
-.checkbox {
+.input-checkbox {
     @apply focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded;
 }

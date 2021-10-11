@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # == Schema Information
 #
 # Table name: plans
@@ -20,15 +18,15 @@
 #
 class Plan < ApplicationRecord
   belongs_to :patient
-  has_one :macronutrient, dependent: :destroy
-  has_one :group_portion, dependent: :destroy
-  has_one :group_portion_time, dependent: :destroy
+  has_one :macronutrient
+  has_one :group_portion
+  has_one :group_portion_time
 
   after_create :create_associations
 
   def create_associations
-    create_macronutrient
-    create_group_portion
-    create_group_portion_time
+    self.create_macronutrient
+    self.create_group_portion
+    self.create_group_portion_time
   end
 end

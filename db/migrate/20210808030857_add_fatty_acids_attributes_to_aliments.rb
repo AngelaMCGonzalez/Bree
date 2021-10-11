@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class AddFattyAcidsAttributesToAliments < ActiveRecord::Migration[6.1]
   def change
     add_column :aliments, :satured_fatty_acids, :decimal, null: true, default: 0.0

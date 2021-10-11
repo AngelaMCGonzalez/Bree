@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # == Schema Information
 #
 # Table name: group_portions
@@ -35,7 +33,7 @@
 #
 #  fk_rails_...  (plan_id => plans.id)
 #
-require 'test_helper'
+require "test_helper"
 
 class GroupPortionTest < ActiveSupport::TestCase
   # test "the truth" do

@@ -74,7 +74,7 @@
 						</div>
 						<div class="hidden sm:block">
 							<nav 
-								data-controller="paint-active-tabs"
+								data-controller="calories-tabs"
 								class="flex space-x-4" 
 								aria-label="Tabs"
 							>
@@ -84,8 +84,8 @@
 									data-controller="operation-tabs" 
 									data-operation-tabs-url-value="<%= admin_patient_operations_harris_path(patient_id: @patient.id)%>"
 									data-operation-tabs-id-value="harris-operations"
-									data-action="click->operation-tabs#changeTab click->paint-active-tabs#selectTab"
-									data-paint-active-tabs-target="option"
+									data-action="click->operation-tabs#changeTab click->calories-tabs#selectTab"
+									data-calories-tabs-target="option"
 								>
 									Harris
 								</a>
@@ -94,8 +94,8 @@
 									data-controller="operation-tabs" 
 									data-operation-tabs-url-value="<%= admin_patient_operations_mifflins_path(patient_id: @patient.id)%>"
 									data-operation-tabs-id-value="mifflin-operations"
-									data-action="click->operation-tabs#changeTab click->paint-active-tabs#selectTab"
-									data-paint-active-tabs-target="option"
+									data-action="click->operation-tabs#changeTab click->calories-tabs#selectTab"
+									data-calories-tabs-target="option"
 								>
 									Mifflin
 								</a>
@@ -104,8 +104,8 @@
 									data-controller="operation-tabs" 
 									data-operation-tabs-url-value="<%= admin_patient_path(id: @patient.id)%>"
 									data-operation-tabs-id-value="patient"
-									data-action="click->operation-tabs#changeTab click->paint-active-tabs#selectTab"
-									data-paint-active-tabs-target="option"                        
+									data-action="click->operation-tabs#changeTab click->calories-tabs#selectTab"
+									data-calories-tabs-target="option"                        
 								>
 									Datos Px
 								</a>

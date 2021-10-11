@@ -1,7 +1,21 @@
-label{
-  @apply block font-medium text-gray-500;
+.label-sm{
+	@apply
+		font-medium 
+		text-sm 
+		text-gray-500
+	;
 }
 
-.medium{
-  @apply font-medium text-gray-500;
+.label-md{
+	@apply
+		font-medium 
+		text-md 
+		text-gray-500
+	;
+}
+
+.label-wakeup-time{
+	@apply
+		sr-only
+	;
 }

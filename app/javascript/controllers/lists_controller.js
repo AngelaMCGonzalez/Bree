@@ -1,20 +1,20 @@
-import { Controller } from 'stimulus';
+import { Controller } from 'stimulus'
 
 export default class extends Controller {
   static targets = [
-    'deleteButtons',
-    'elementsContainer',
+    'deleteButtons', 
+    'elementsContainer'
   ];
 
   static values = { elements: Array }
 
-  connect() {
-    this.displayElements();
+  connect(){
+    this.displayElements()
   }
 
-  addInputField(ev, newValue = false) {
+  addInputField(ev, newValue = false){
     const customID = Date.now();
-    const tr = document.createElement('tr');
+    const tr = document.createElement('tr')
     tr.setAttribute('id', customID);
     tr.innerHTML = `
       <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
@@ -25,7 +25,7 @@ export default class extends Controller {
               type="text" 
               name="ingrediente" 
               id="ingrediente" 
-              value="${newValue ? ev : ''}"
+              value="${newValue ? ev : '' }"
               class="border pl-3 h-9 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="Ingresa paso"
             >
         </div>
@@ -41,22 +41,24 @@ export default class extends Controller {
             </svg>
         </a>
       </td>
-    `;
-    this.elementsContainerTarget.appendChild(tr);
+    `
+    this.elementsContainerTarget.appendChild(tr)
   }
 
-  removeInputField(e) {
-    const { customIndex } = e.target.dataset;
-    const el = document.getElementById(customIndex);
+  removeInputField(e){
+    const customIndex = e.target.dataset.customIndex
+    const el = document.getElementById(customIndex)
 
-    if (el) {
-      el.remove();
+    if(el){
+      el.remove()
     }
   }
 
-  displayElements() {
-    if (this.elementsValue.length > 0) {
-      this.elementsValue.forEach((element) => setTimeout(() => { this.addInputField(element, true); }, 1000));
+  displayElements(){
+    if(this.elementsValue.length > 0) {
+      this.elementsValue.forEach(element => 
+        setTimeout(() => {  this.addInputField(element, true) }, 1000)
+      )
     }
   }
 }

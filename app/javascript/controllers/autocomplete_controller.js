@@ -6,7 +6,7 @@ export default class extends Controller {
   static values = {
     submitOnEnter: Boolean,
     url: String,
-    minLength: Number,
+    minLength: Number
   }
 
   connect() {
@@ -150,7 +150,7 @@ export default class extends Controller {
       this.hiddenTarget.dispatchEvent(new Event('input'));
       this.hiddenTarget.dispatchEvent(new Event('change'));
     } else {
-      this.inputTarget.value = value;
+      this.inputTarget.value =  value;
     }
 
     this.inputTarget.focus();

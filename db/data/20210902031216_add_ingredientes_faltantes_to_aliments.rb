@@ -8,10 +8,10 @@ class AddIngredientesFaltantesToAliments < ActiveRecord::Migration[6.1]
     csv = CSV.parse(file, headers: false)
     csv.each do |row|
       Aliment.create!(
-        group_name: row[0],
-        name: row[1],
+        group_name: row[0], 
+        name: row[1], 
         suggested_amount: row[2],
-        unit: row[3],
+        unit: row[3], 
         net_weight: row[4],
         energy: row[5],
         protein: row[6],

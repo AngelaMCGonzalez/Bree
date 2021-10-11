@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # == Schema Information
 #
 # Table name: aliments
@@ -40,5 +38,6 @@ class Aliment < ApplicationRecord
   include PgSearch::Model
 
   pg_search_scope :full_search,
-                  against: :name
+    against: :name
+    
 end

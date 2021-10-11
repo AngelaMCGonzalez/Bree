@@ -5,7 +5,7 @@ export default class extends Controller {
 
     connect() {
       const selectedValues = JSON.parse(`[${this.crudInputTarget.value}]`);
-
+      
       selectedValues.map((ingredient) => this.renderStudies(ingredient.value, ingredient.group, ingredient.unit));
       this.resultsTarget.addEventListener('click', this.onResultsClick);
       this.inputTarget.addEventListener('keydown', this.onKeyDown);
@@ -17,7 +17,7 @@ export default class extends Controller {
         const selected = this.resultsTarget.querySelector(
           '[aria-selected="true"]',
         );
-
+        
         this.addValue(selected);
       }
     }
@@ -28,13 +28,13 @@ export default class extends Controller {
     }
 
     addValue = (selected) => {
-      setTimeout(() => {
-        this.inputTarget.value = '';
-        if (selected) {
+      setTimeout(() => { 
+        this.inputTarget.value = ''; 
+        if (selected){
           const value = this.extractTextValue(selected);
-          const group = selected.getAttribute('data-autocomplete-group-value');
-          const unit = selected.getAttribute('data-autocomplete-unit-value');
-
+          const group = selected.getAttribute('data-autocomplete-group-value')
+          const unit = selected.getAttribute('data-autocomplete-unit-value')
+    
           if (!this.crudInputTarget.value.includes(value)) {
             this.renderStudies(value, group, unit);
             this.saveArray(value, group, unit);
@@ -44,11 +44,11 @@ export default class extends Controller {
     }
 
     renderStudies = (value, group = '', unit = '') => {
-      const customID = this.uuidv4();
-      const tr = document.createElement('tr');
-      tr.setAttribute('id', customID);
-      tr.classList.add('ml-1', 'mt-3', 'is-flex', 'is-align-items-center');
-      tr.innerHTML = `
+        const customID = this.uuidv4();
+        const tr = document.createElement('tr');
+        tr.setAttribute('id', customID);
+        tr.classList.add('ml-1', 'mt-3', 'is-flex', 'is-align-items-center');
+        tr.innerHTML = `
           <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
             ${value}
           </td>
@@ -71,36 +71,38 @@ export default class extends Controller {
             </a>
           </td>`;
 
-      this.selectedValuesTarget.appendChild(tr);
+        this.selectedValuesTarget.appendChild(tr);
     }
-
+    
     uuidv4() {
-      return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));
+      return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+        (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+      );
     }
-
+    
     saveArray = (value, group, unit) => {
       const studies = this.crudInputTarget.value || '';
 
       const studiesArray = studies.split(',').filter((e) => e !== '');
-      studiesArray.push(JSON.stringify({ value, group, unit }));
+      studiesArray.push(JSON.stringify({value: value, group: group, unit: unit}));
 
       this.crudInputTarget.value = studiesArray.join();
     }
 
     deleteSelectedElement = (e) => {
-      e.preventDefault();
-
-      const customIndex = e.target.dataset.uniqueIndex;
-      const el = document.getElementById(customIndex);
-
-      if (el) {
-        el.remove();
-        const { uniqueValue } = e.target.dataset;
+      e.preventDefault()
+      
+      const customIndex = e.target.dataset.uniqueIndex
+      const el = document.getElementById(customIndex)
+      
+      if(el){
+        el.remove()
+        const uniqueValue = e.target.dataset.uniqueValue
         const selectedValues = JSON.parse(`[${this.crudInputTarget.value}]`);
-
+        
         const values = selectedValues.filter((e) => e.value !== '' && e.value !== uniqueValue);
         const stringValues = JSON.stringify(values);
-
+        
         this.crudInputTarget.value = stringValues.substring(1, stringValues.length - 1);
       }
     }

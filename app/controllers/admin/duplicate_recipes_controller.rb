@@ -1,12 +1,12 @@
-# frozen_string_literal: true
-
 module Admin
   class DuplicateRecipesController < BaseController
     def edit
       @recipe = Recipe.find(params[:id])
       @cloned_recipe = Recipe.new(cloned_recipe_attributes)
 
-      redirect_to edit_admin_recipe_path(id: @cloned_recipe.id) if @cloned_recipe.save
+      if @cloned_recipe.save
+        redirect_to edit_admin_recipe_path(id: @cloned_recipe.id)
+      end
     end
 
     private

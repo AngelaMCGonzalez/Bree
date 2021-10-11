@@ -1,8 +1,6 @@
-# frozen_string_literal: true
-
 module Admin
   class RecipesController < BaseController
-    before_action :set_recipe, only: %i[show edit update destroy]
+    before_action :set_recipe, only: %i[ show edit update destroy ]
 
     layout 'recipes'
 
@@ -48,8 +46,7 @@ module Admin
     end
 
     def recipe_params
-      params.require(:recipe).permit(:name, :image, :custom_id, :preparation_time, :cooking_time, :ingredients, :steps,
-                                     :condiments, :food_time_priority, :accompaniment, food_time: [], recipe_type: [])
+      params.require(:recipe).permit(:name, :image, :custom_id, :preparation_time, :cooking_time, :ingredients, :steps, :condiments, :food_time_priority, :accompaniment, food_time: [], recipe_type: [])
     end
   end
 end

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # == Schema Information
 #
 # Table name: aliments
@@ -36,7 +34,7 @@
 #  created_at                  :datetime         not null
 #  updated_at                  :datetime         not null
 #
-require 'test_helper'
+require "test_helper"
 
 class AlimentTest < ActiveSupport::TestCase
   # test "the truth" do

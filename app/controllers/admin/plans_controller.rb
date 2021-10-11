@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Admin
   class PlansController < BaseController
     layout 'plans'
@@ -8,7 +6,7 @@ module Admin
     def new
       @patient = @plan.patient
     end
-
+  
     def create; end
 
     def update
@@ -18,7 +16,7 @@ module Admin
     private
 
     def set_patient_plan
-      @plan = Plan.find_or_create_by(patient_id: params[:patient_id])
+      @plan = Plan.find_or_create_by(patient_id: params[:patient_id])  
     end
 
     def plan_params
