@@ -10,6 +10,6 @@ import "@hotwired/turbo-rails"
 
 // import * as ActiveStorage from "@rails/activestorage"
 // import "channels"
-import '../stylesheets/application.scss'
+import '../stylesheets/aplication.scss' //import tailwindcss
 import "controllers"
 Rails.start()

@@ -1,0 +1,15 @@
+select{
+    @apply
+        focus:ring-indigo-500 
+        focus:border-indigo-500 
+        h-full 
+        py-0 
+        pl-0 
+        pr-3 
+        border-transparent 
+        bg-transparent 
+        text-gray-500 
+        sm:text-sm 
+        rounded-md
+    ;
+}

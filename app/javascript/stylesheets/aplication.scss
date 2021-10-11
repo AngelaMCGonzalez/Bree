@@ -1,0 +1,17 @@
+/* app/javascript/stylesheets/application.scss */
+@import "tailwindcss/base";
+
+@import "./base/typography";
+
+@import "tailwindcss/components";
+
+@import "components/autocomplete";
+@import "./components/input";
+@import "./components/label";
+@import "./components/select";
+
+@import "tailwindcss/utilities";
+
+a:hover {
+  cursor:pointer;
+}
