@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'slideover_expedients/general'
+  get 'slideover_expedients/habits'
+  get 'slideover_expedients/history'
+  get 'slideover_expedients/physical_activity'
+  get 'slideover_expedients/notes'
   resources :invitations
   resources :aliments
   resources :aliment_groups
