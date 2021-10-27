@@ -1,0 +1,243 @@
+<div class="fixed inset-0 overflow-hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+    <div class="absolute inset-0 overflow-hidden">
+      <!--
+        Background overlay, show/hide based on slide-over state.
+  
+        Entering: "ease-in-out duration-500"
+          From: "opacity-0"
+          To: "opacity-100"
+        Leaving: "ease-in-out duration-500"
+          From: "opacity-100"
+          To: "opacity-0"
+      -->
+      <div class="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+      <div class="fixed inset-y-0 right-0 pl-10 max-w-full flex">
+        <!--
+          Slide-over panel, show/hide based on slide-over state.
+  
+          Entering: "transform transition ease-in-out duration-500 sm:duration-700"
+            From: "translate-x-full"
+            To: "translate-x-0"
+          Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
+            From: "translate-x-0"
+            To: "translate-x-full"
+        -->
+        <div class="relative w-screen max-w-3xl">
+          <!--
+            Close button, show/hide based on slide-over state.
+  
+            Entering: "ease-in-out duration-500"
+              From: "opacity-0"
+              To: "opacity-100"
+            Leaving: "ease-in-out duration-500"
+              From: "opacity-100"
+              To: "opacity-0"
+          -->
+          <div class="absolute top-0 left-0 -ml-8 pt-4 pr-2 flex sm:-ml-10 sm:pr-4">
+            <button type="button" class="rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white">
+              <span class="sr-only">Close panel</span>
+              <!-- Heroicon name: outline/x -->
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+  
+          <div class="h-full flex flex-col bg-white shadow-xl overflow-y-scroll">
+            <div class="px-4 sm:px-6 mt-4">
+                <h2 class="text-xl font-semibold text-gray-900" id="slide-over-title">
+                    Expediente
+                </h2>
+                <div class="mt-5">
+                    <div class="sm:hidden">
+                    <label for="tabs" class="sr-only">Select a tab</label>
+                    <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
+                    <select id="tabs" name="tabs" class="block w-full focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                        <option>Generales</option>
+
+												<option >Historial</option>
+                
+                        <option selected>Antropométrico</option>
+                
+                        <option>Hábitos</option>
+                
+                        <option>Actividad física</option>
+
+                        <option>Notas</option>
+                    </select>
+                    </div>
+                    <div class="hidden sm:block">
+                    <nav class="flex space-x-4" aria-label="Tabs">
+                        <!-- Current: "bg-indigo-100 text-indigo-700", Default: "text-gray-500 hover:text-gray-700" -->
+                        <a href="general" class="text-gray-500  hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md">
+                        Generales
+                        </a>
+
+                        <a href="history" class= "text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md"  >
+                        Historial
+                        </a>
+
+												<a href="anthropometric" class="bg-indigo-100 text-indigo-700 px-3 py-2 font-medium text-sm rounded-md" aria-current="page">
+                        Antropométrico
+                        </a>
+                
+                        <a href="habits" class="text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md">
+                        Hábitos
+                        </a>
+
+                        <a href="physical_activity" class="text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md">
+                        Actividad física
+                        </a>
+                
+                        <a href="notes" class="text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md">
+                        Notas
+                        </a>
+                    </nav>
+                    </div>
+                </div>
+  
+            </div>
+						
+             <div class="mt-2 relative flex-1 overflow-y-auto">
+              <!-- Replace with your content --> 
+            <div class="bg-gray-100 w-full px-6 py-5">
+                <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+                    <div class="md:grid md:grid-cols-3 md:gap-6">
+                        <div class="md:col-span-3">
+                            <h3>Datos generales</h3>
+                            <div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
+                        
+										<div class="mt-5 md:mt-5 md:col-span-3">
+												<form action="#" method="POST">
+														<div class="grid grid-cols-9 gap-6">
+																<div class="col-span-6 sm:col-span-3">
+																<label for="size" class="text-sm">Talla (m)</label>
+																<input type="number" step="any" name="size" id="size" autocomplete="size" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
+																</div>
+										
+																<div class="col-span-6 sm:col-span-3">
+																<label for="weight" class="text-sm">Peso (kg)</label>
+																<input type="number" step="any" name="weight" id="weight" autocomplete="weight" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+																</div>
+
+																<div class="col-span-6 sm:col-span-3">
+																<label for="imc" class="text-sm">IMC (kg/m2)</label>
+																
+																	<h3 class="mt-1 p-2 h-11 border bg-gray-50 block w-full sm:text-md text-gray-400 border-gray-300 rounded-md">
+																			0
+																	</h3>
+																	
+															</div>
+											
+																<div class="col-span-6 sm:col-span-3">
+																<label for="normal-weight" class="text-sm">Peso habitual (kg)</label>
+																<input type="number" step="any" name="normal-weight" id="normal-weight" autocomplete="normal-weight" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+																</div>
+
+																
+														</div>
+												</form>
+										</div>
+								</div>
+						</div>
+				</div> <!-- fin card datos generales-->
+			</div>
+
+					<!-- Circunferencia --> 
+			<div class="bg-gray-100 w-full px-6 py-5">
+				<div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+						<div class="md:grid md:grid-cols-3 md:gap-6">
+								<div class="md:col-span-3">
+										<h3 >Circunferencia </h3>
+										<div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
+								
+										<div class="mt-5 md:mt-5 md:col-span-3">
+												<form action="#" method="POST">
+														<div class="grid grid-cols-6 gap-6">
+																<div class="col-span-6 sm:col-span-3">
+																	<label for="waist" class="text-sm">Cintura (cm)</label>
+																	<input type="number" step="any" name="waist" id="waist" autocomplete="waist" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
+																</div>
+										
+																<div class="col-span-6 sm:col-span-3">
+																	<label for="hip" class="text-sm">Cadera (cm)</label>
+																	<input type="number" step="any" name="hip" id="hip" autocomplete="hip" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+																</div>
+
+																<div class="col-span-6 sm:col-span-3">
+																	<label for="relaxed-arm" class="text-sm">Brazo relajado (cm)</label>
+																	<input type="number" step="any" name="relaxed-arm" id="relaxed-arm" autocomplete="relaxed-arm" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+																</div>
+																
+																<div class="col-span-6 sm:col-span-3">
+																	<label for="contracted-arm" class="text-sm">Brazo contraído (cm)</label>
+																	<input type="number" step="any" name="contracted-arm" id="contracted-arm" autocomplete="contracted-arm" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+																</div>
+
+																<div class="col-span-6 sm:col-span-3">
+																	<label for="calf" class="text-sm">Pantorrilla (cm)</label>
+																	<input type="number" step="any" name="calf" id="calf" autocomplete="calf" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+																</div>
+
+																
+														</div>
+												</form>
+										</div>
+								</div>
+						</div>
+				</div> <!-- fin circunferencia-->
+			</div>
+					<!-- Composición corporal --> 
+			<div class="bg-gray-100 w-full px-6 py-5">
+				<div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+						<div class="md:grid md:grid-cols-3 md:gap-6">
+								<div class="md:col-span-3">
+										<h3 class="text-lg font-medium leading-6 text-gray-900">Composición corporal </h3>
+										<div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
+								
+										<div class="mt-5 md:mt-5 md:col-span-3">
+												<form action="#" method="POST">
+														<div class="grid grid-cols-6 gap-6">
+																<div class="col-span-6 sm:col-span-3">
+																	<label for="fat-percentage" class="text-sm">Porcentaje de grasa (%)</label>
+																	<input type="number" step="any" name="fat-percentage" id="fat-percentage" autocomplete="fat-percentage" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
+																</div>
+										
+																<div class="col-span-6 sm:col-span-3">
+																	<label for="kg-fat" class="text-sm">Kg de grasa*</label>
+																	<h3 class="mt-1 p-2 h-11 border bg-gray-50 block w-full sm:text-md text-gray-400 border-gray-300 rounded-md">
+																		0%
+																	</h3>
+																</div>
+
+																<div class="col-span-6 sm:col-span-3">
+																	<label for="muscle-mass" class="text-sm">Masa muscular (kg)</label>
+																	<input type="number" step="any" name="muscle-mass" id="muscle-mass" autocomplete="muscule-mass" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+																</div>
+																
+																<div class="col-span-6 sm:col-span-3">
+																	<label for="body-water" class="text-sm">Agua corporal (L)</label>
+																	<input type="number" step="any" name="body-water" id="body-water" autocomplete="body-water" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+																</div>
+
+																
+
+																
+														</div>
+
+																<div class="col-span-6 sm:col-span-4 mt-8">
+																	<label for="bioimpedance" class="text-sm">Bioimpedancia</label>
+																	<button type="button" class="relative block w-full border-2 border-gray-300 border-dashed rounded-lg p-2 text-center hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-1">
+																		<svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+																			<path vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+																		</svg>
+																		<span class="mt-2 block text-sm font-medium text-gray-900">
+																			Agregar archivo
+																		</span>
+																	</button>
+																</div>
+												</form>
+										</div>
+								</div>
+						</div>
+				</div> <!-- fin Composición Corporal-->

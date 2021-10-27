@@ -55,11 +55,13 @@
                     <select id="tabs" name="tabs" class="block w-full focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
                         <option>Generales</option>
                 
-                        <option selected>Historial</option>
+                        <option >Historial</option>
+
+												<option >Antropométrico</option>
                 
-                        <option>Hábitos</option>
+                        <option >Hábitos</option>
                 
-                        <option>Actividad física</option>
+                        <option selected>Actividad física</option>
 
                         <option>Notas</option>
                     </select>
@@ -67,12 +69,16 @@
                     <div class="hidden sm:block">
                     <nav class="flex space-x-4" aria-label="Tabs">
                         <!-- Current: "bg-indigo-100 text-indigo-700", Default: "text-gray-500 hover:text-gray-700" -->
-                        <a href="general" class="text-gray-500  hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md">
+                        <a href="general" class="text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md">
                         Generales
                         </a>
 
                         <a href="history" class="text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md">
                         Historial
+                        </a>
+
+												<a href="anthropometric" class=" text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md">
+                        Antropométrico
                         </a>
                 
                         <a href="habits" class="text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md">
@@ -92,16 +98,15 @@
   
             </div>
 						
-            <div class="mt-2 relative flex-1 overflow-y-auto">
+             <div class="mt-2 relative flex-1 overflow-y-auto">
               <!-- Replace with your content --> 
-						
-            	<div class="bg-gray-100 w-full px-6 py-5">
-               
-                <div class="bg-white shadow px-4 py-5 mt-6 sm:rounded-lg sm:p-6">
+            <div class="bg-gray-100 w-full px-6 py-5">
+                <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
                     <div class="md:grid md:grid-cols-3 md:gap-6">
                         <div class="md:col-span-3">
-                            <h3 class="text-lg font-medium leading-6 text-gray-900">Tipo de ejercicio </h3>
+                            <h3>Tipo de ejercicio</h3>
                             <div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
+                        
                             <div class="mt-3 md:mt-3 md:col-span-3">
                                 <fieldset>
                                     <legend class="text-base font-medium text-gray-900"></legend>
@@ -111,44 +116,44 @@
                                       <div class="grid grid-cols-4">
                                         
 																				<div class="mt-4">
-																					<label  class="font-medium text-gray-500">
-																						<input type="checkbox" id="ninguna" name="ninguno" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"/>
+																					<label  class="medium">
+																						<input type="checkbox" id="ninguna" name="ninguno" class="checkbox"/>
 																						Ninguno
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label  class="font-medium text-gray-500">
-																						<input type="checkbox" id="walk" name="walk" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"/>
+																					<label  class="medium">
+																						<input type="checkbox" id="walk" name="walk" class="checkbox"/>
 																						Caminata
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label  class="font-medium text-gray-500">
-																						<input type="checkbox" id="run" name="run" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"/>
+																					<label  class="medium">
+																						<input type="checkbox" id="run" name="run" class="checkbox"/>
 																						Correr
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label  class="font-medium text-gray-500">
-																						<input type="checkbox" id="weights" name="weights" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"/>
+																					<label  class="medium">
+																						<input type="checkbox" id="weights" name="weights" class="checkbox"/>
 																						Pesas 
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label  class="font-medium text-gray-500">
-																						<input type="checkbox" id="functional" name="functional" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"/>
+																					<label  class="medium">
+																						<input type="checkbox" id="functional" name="functional" class="checkbox"/>
 																						Funcional 
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label class="font-medium text-gray-500">
-																						<input type="checkbox" id="bike" name="bike" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"/>
+																					<label class="medium">
+																						<input type="checkbox" id="bike" name="bike" class="checkbox"/>
 																						Bicicleta
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label class="font-medium text-gray-500">
-																						<input type="checkbox" id="swimming" name="swimming" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"/>
+																					<label class="medium">
+																						<input type="checkbox" id="swimming" name="swimming" class="checkbox"/>
 																						Natación
 																					</label>
 																				</div>
@@ -157,11 +162,11 @@
 																			
                                 </fieldset>
                                 <div class="col-span-6 sm:col-span-4 mt-8">
-                                    <label for="motive" class="block text-sm font-medium text-gray-500">Otro motivo</label>
-                                    <input type="text" name="motive" id="motive" autocomplete="motive" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+                                    <label for="motive" class="text-sm">Otro tipo de ejercicio</label>
+                                    <input type="text" name="motive" id="motive" autocomplete="motive" class="placeholder">
                                 </div>
 																<div class="col-span-6 sm:col-span-4 mt-8">
-																	<label for="desc_activity" class="block text-sm font-medium text-gray-500">Descripción de la actividad </label>
+																	<label for="desc_activity" class="text-sm">Descripción de la actividad </label>
 																	<textarea name="desc_activity" autocomplete="desc_activity" class="mt-1 px-4 py-14 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md"></textarea>	
 																</div>
 																	<div class="grid grid-cols-6 gap-6">
@@ -170,10 +175,10 @@
 																	
 																<div class="col-span-6 sm:col-span-6 mt-8">
 																	<div>
-																	<label id="listbox-label-act-fisica" class="block text-sm font-medium text-gray-500">
+																	<label id="listbox-label-act-fisica" class="text-sm">
 																			Nivel de actividad física
 																	</label>
-																	<div class="max-w-screen-2xl">
+																	<div class="max-w-screen-2xl mt-1">
 																			<div
 																							x-data="select({ data: { inactivo: 'Inactivo (No realiza actividad física)', principiante: 'Principiante (1 a 6 meses realizando actividad física)', intermedio: 'Intermedio (Más de 6 meses realizando actividad física)', avanzado: 'Avanzado (Más de 1 año realizando actividad física)'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'nivel_de_actividad_fisica', placeholder: 'Elige una opción' })"
 																							x-init="init()"
@@ -375,8 +380,8 @@
 																<!--Fin select-->
 																<div class="grid grid-cols-6 gap-6">
 																	<div class="col-span-6 sm:col-span-3 mt-4">
-																		<label for="hora" class="block text-sm font-medium text-gray-500">Hora en la que se ejercita</label>
-																		<input type="time" name="hora" id="hora" autocomplete="family-name" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+																		<label for="hora" class="text-sm">Hora en la que se ejercita</label>
+																		<input type="time" name="hora" id="hora" autocomplete="family-name" class="placeholder">
 																	</div>
 																</div>
 
@@ -406,20 +411,20 @@
 											
 										<div class="grid grid-cols-1">
 											<div class="mt-4">
-												<label  class="font-medium text-gray-500">
-													<input type="checkbox" id="leve" name="leve" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"/>
+												<label  class="medium">
+													<input type="checkbox" id="leve" name="leve" class="checkbox"/>
 													Leve
 												</label>
 											</div>
 											<div class="mt-4">
-												<label  class="font-medium text-gray-500">
-													<input type="checkbox" id="moderate" name="moderate" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"/>
+												<label  class="medium">
+													<input type="checkbox" id="moderate" name="moderate" class="checkbox"/>
 													Moderada
 												</label>
 											</div>
 											<div class="mt-4">
-												<label  class="font-medium text-gray-500">
-													<input type="checkbox" id="intense" name="intense" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"/>
+												<label  class="medium">
+													<input type="checkbox" id="intense" name="intense" class="checkbox"/>
 													Intensa
 												</label>
 											</div>
@@ -433,10 +438,10 @@
 							
 			<div class="col-span-6 sm:col-span-6 mt-4">
 				<div>
-				<label id="listbox-label-frequency" class="block text-sm font-medium text-gray-500">
+				<label id="listbox-label-frequency" class="text-sm">
 						Frecuencia (días de la semana)
 				</label>
-				<div class="max-w-xs">
+				<div class="max-w-xs mt-1">
 						<div
 										x-data="select({ data: { 1: '1', 2: '2', 3: '3', 4: '4',5: '5', 6: '6', 7: '7'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'Frecuencia', placeholder: 'Elige una opción' })"
 										x-init="init()"
@@ -642,10 +647,10 @@
 							
 						<div class="col-span-6 sm:col-span-6 mt-4">
 							<div>
-							<label id="listbox-label-duration" class="block text-sm font-medium text-gray-500">
+							<label id="listbox-label-duration" class="text-sm">
 									Duración
 							</label>
-							<div class="max-w-screen-2xl">
+							<div class="max-w-screen-2xl mt-1">
 									<div
 													x-data="select({ data: {menos: 'Menos de 30 minutos', 30: '30 minutos a 1 hora', 1: 'Más de 1 hora', 2: 'Más de 2 horas'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'nivel_de_actividad_fisica', placeholder: 'Elige una opción' })"
 													x-init="init()"

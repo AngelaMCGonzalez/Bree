@@ -42,6 +42,7 @@
               </svg>
             </button>
           </div>
+
   
           <div class="h-full flex flex-col bg-white shadow-xl overflow-y-scroll">
             <div class="px-4 sm:px-6 mt-4">
@@ -56,6 +57,8 @@
                         <option>Generales</option>
                 
                         <option>Historial</option>
+
+												<option >Antropométrico</option>
                 
                         <option selected>Hábitos</option>
                 
@@ -73,6 +76,10 @@
 
                         <a href="history" class="text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md">
                         Historial
+                        </a>
+
+												<a href="anthropometric" class=" text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md">
+                        Antropométrico
                         </a>
 
                         <a href="habits" class="bg-indigo-100 text-indigo-700 px-3 py-2 font-medium text-sm rounded-md" aria-current="page">
@@ -98,19 +105,19 @@
                 <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6"> <!-- Inicia card Tipo de alimentación --> 
                     <div class="md:grid md:grid-cols-3 md:gap-6">
                         <div class="md:col-span-3">
-                            <h3 class="text-lg font-medium leading-6 text-gray-900">Tipo de alimentación</h3>
+                            <h3>Tipo de alimentación</h3>
                             <div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
                         
                             <div class="mt-5 md:mt-5 md:col-span-3">
                                 <form action="#" method="POST">
                                     <div class="grid grid-cols-6 gap-6">
 
-                                        <div class="col-span-6 sm:col-span-2 mt-2 ">
+                                        <div class="col-span-4 sm:col-span-2 mt-2 ">
                                           <div>
-																						<label id="listbox-label-alimentation" class="block text-sm font-medium text-gray-500">
+																						<label id="listbox-label-alimentation" class="text-sm">
 																								Tipo de alimentación
 																						</label>
-																						<div class="max-w-screen-2xl">
+																						<div class="max-w-screen-2xl mt-1">
 																								<div
 																												x-data="select({ data: { regular: 'Regular', vegetariana: 'Vegetariana', vegana: 'Vegana', pescetariana: 'Pescetariana'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'nivel_de_actividad_fisica', placeholder: 'Elige una opción' })"
 																												x-init="init()"
@@ -313,8 +320,8 @@
                                         </div>
 
                                         <div class="col-span-6 sm:col-span-4">
-                                          <label for="first-name" class="block text-sm font-medium text-gray-500">Otro tipo</label>
-                                          <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md" placeholder="Especificar otro tipo de alimentación">
+                                          <label for="first-name" class="text-sm">Otro tipo</label>
+                                          <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="placeholder" placeholder="Especificar otro tipo de alimentación">
                                         </div>
 
                                         
@@ -328,12 +335,12 @@
                 <div class="bg-white shadow px-4 py-5 mt-6 sm:rounded-lg sm:p-6">
                     <div class="md:grid md:grid-cols-3 md:gap-6">
                         <div class="md:col-span-3">
-                            <h3 class="text-lg font-medium leading-6 text-gray-900">Preferencias y exclusiones de alimentos</h3>
+                            <h3 >Preferencias y exclusiones de alimentos</h3>
                             <div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
                             
                             <div class="mt-3 md:mt-3 md:col-span-3">
                                 <div class="flex justify-between">
-                                    <label for="allergies" class="block text-sm font-medium text-gray-500">Alergias e intolerancias</label> 
+                                    <label for="allergies" class="text-sm">Alergias e intolerancias</label> 
                                     <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-full text-indigo-600 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                         <!-- Heroicon name: outline/plus -->
                                         <svg xmlns="http://www.w3.org/2000/svg" class="-ml-0.5 mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -365,7 +372,7 @@
 
                             <div class="mt-4 md:mt-6 md:col-span-3">
                                 <div class="flex justify-between">
-                                    <label for="allergies" class="block text-sm font-medium text-gray-500">Alimentos que no consume</label> 
+                                    <label for="allergies" class="text-sm">Alimentos que no consume</label> 
                                     <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-full text-indigo-600 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                       <!-- Heroicon name: outline/plus -->
                                       <svg xmlns="http://www.w3.org/2000/svg" class="-ml-0.5 mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -406,7 +413,7 @@
 
                             <div class="mt-4 md:mt-6 md:col-span-3">
                                 <div class="flex justify-between">
-                                    <label for="allergies" class="block text-sm font-medium text-gray-500">Alimentos preferidos</label> 
+                                    <label for="allergies" class="text-sm">Alimentos preferidos</label> 
                                     <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-full text-indigo-600 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                       <!-- Heroicon name: outline/plus -->
                                       <svg xmlns="http://www.w3.org/2000/svg" class="-ml-0.5 mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -453,7 +460,7 @@
                 <div class="bg-white shadow px-4 py-5 mt-6 sm:rounded-lg sm:p-6">
                   <div class="md:grid md:grid-cols-3 md:gap-6">
                       <div class="md:col-span-3">
-                          <h3 class="text-lg font-medium leading-6 text-gray-900">Suplementos</h3>
+                          <h3 >Suplementos</h3>
                           <div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
                           <div class="mt-3 md:mt-3 md:col-span-3">
                               <fieldset>
@@ -461,79 +468,79 @@
                                   <div class="mt-4 grid grid-cols-4 gap-2">
                                       <div class="flex items-start">
                                       <div class="h-5 flex items-center">
-                                          <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                          <input id="comments" name="comments" type="checkbox" class="checkbox">
                                       </div>
                                       <div class="ml-3 text-md">
-                                          <label for="comments" class="font-medium text-gray-500">Ninguno</label>
+                                          <label for="comments" class="medium">Ninguno</label>
                                       </div>
                                       </div>
                                       <div>
                                       <div class="flex items-start">
                                           <div class="h-5 flex items-center">
-                                          <input id="candidates" name="candidates" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                          <input id="candidates" name="candidates" type="checkbox" class="checkbox">
                                           </div>
                                           <div class="ml-3 text-md">
-                                          <label for="candidates" class="font-medium text-gray-500">Proteína</label>
+                                          <label for="candidates" class="medium">Proteína</label>
                                           </div>
                                       </div>
                                       </div>
                                       <div>
                                       <div class="flex items-start">
                                           <div class="h-5 flex items-center">
-                                          <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                          <input id="offers" name="offers" type="checkbox" class="checkbox">
                                           </div>
                                           <div class="ml-3 text-md">
-                                          <label for="offers" class="font-medium text-gray-500">Multivitamínico</label>
+                                          <label for="offers" class="medium">Multivitamínico</label>
                                           </div>
                                       </div>
                                       </div>
                                       <div>
                                           <div class="flex items-start">
                                               <div class="h-5 flex items-center">
-                                              <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                              <input id="offers" name="offers" type="checkbox" class="checkbox">
                                               </div>
                                               <div class="ml-3 text-md">
-                                              <label for="offers" class="font-medium text-gray-500">Omega 3</label>
+                                              <label for="offers" class="medium">Omega 3</label>
                                               </div>
                                           </div>
                                           </div>
                                       <div>
                                           <div class="flex items-start">
                                               <div class="h-5 flex items-center">
-                                              <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                              <input id="offers" name="offers" type="checkbox" class="checkbox">
                                               </div>
                                               <div class="ml-3 text-md">
-                                              <label for="offers" class="font-medium text-gray-500">Vitamina C</label>
+                                              <label for="offers" class="medium">Vitamina C</label>
                                               </div>
                                           </div>
                                           </div>
                                       <div>
                                           <div class="flex items-start">
                                               <div class="h-5 flex items-center">
-                                              <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                              <input id="offers" name="offers" type="checkbox" class="checkbox">
                                               </div>
                                               <div class="ml-3 text-md">
-                                              <label for="offers" class="font-medium text-gray-500">Ácido fólico</label>
+                                              <label for="offers" class="medium">Ácido fólico</label>
                                               </div>
                                           </div>
                                           </div>
                                       <div>
                                           <div class="flex items-start">
                                               <div class="h-5 flex items-center">
-                                              <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                              <input id="offers" name="offers" type="checkbox" class="checkbox">
                                               </div>
                                               <div class="ml-3 text-md">
-                                              <label for="offers" class="font-medium text-gray-500">Calcio </label>
+                                              <label for="offers" class="medium">Calcio </label>
                                               </div>
                                           </div>
                                           </div>
                                       <div>
                                           <div class="flex items-start">
                                               <div class="h-5 flex items-center">
-                                              <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                              <input id="offers" name="offers" type="checkbox" class="checkbox">
                                               </div>
                                               <div class="ml-3 text-md">
-                                              <label for="offers" class="font-medium text-gray-500">Fibra </label>
+                                              <label for="offers" class="medium">Fibra </label>
                                               </div>
                                           </div>
                                         </div>
@@ -541,8 +548,8 @@
                                   </div>
                               </fieldset>
                               <div class="col-span-6 sm:col-span-4 mt-8">
-                                  <label for="motive" class="block text-sm font-medium text-gray-500">Otro suplemento</label>
-                                  <input type="text" name="motive" id="motive" autocomplete="motive" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+                                  <label for="motive" class="text-sm">Otro suplemento</label>
+                                  <input type="text" name="motive" id="motive" autocomplete="motive" class="placeholder">
                               </div>
                           </div>
                       </div>
@@ -552,7 +559,7 @@
                 <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6 mt-6"> <!-- Inicia card Habitos --> 
                     <div class="md:grid md:grid-cols-3 md:gap-6">
                         <div class="md:col-span-3">
-                            <h3 class="text-lg font-medium leading-6 text-gray-900">Hábitos</h3>
+                            <h3 >Hábitos</h3>
                             <div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
                         
                             <div class="mt-5 md:mt-5 md:col-span-3">
@@ -560,13 +567,13 @@
                                     <div class="grid grid-cols-6 gap-6">
 
                                         <div class="col-span-6 sm:col-span-2">
-                                          <label for="wakeup-time" class="block text-sm font-medium text-gray-500">Hora en que se levanta</label>
+                                          <label for="wakeup-time" class="text-sm">Hora en que se levanta</label>
                                           <div class="mt-1 relative rounded-md">
                                             <input type="text" name="wakeup-time" id="wakeup-time" class="mt-1 p-2 h-10 focus:ring-indigo-500 border focus:border-indigo-500 block w-full pl-2 pr-12 sm:text-md border-gray-300 rounded-md" placeholder="00">
                                             <div class="absolute inset-y-0 right-0 flex items-center">
                                             <label for="wakeup-time" class="sr-only">wakeup-time</label>
                                             <div>
-																							<div class="max-w-screen-2xl">
+																							<div class="max-w-screen-2xl mt-1">
 																									<div
 																													x-data="select({ data: { am: 'AM', pm: 'PM'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'nivel_de_actividad_fisica', placeholder: 'AM' })"
 																													x-init="init()"
@@ -771,13 +778,13 @@
                                         </div>
 
                                         <div class="col-span-6 sm:col-span-2">
-                                          <label for="sleep-time" class="block text-sm font-medium text-gray-500">Hora en que se duerme</label>
+                                          <label for="sleep-time" class="text-sm">Hora en que se duerme</label>
                                           <div class="mt-1 relative rounded-md">
                                             <input type="text" name="sleep-time" id="sleep-time" class="mt-1 p-2 h-10 focus:ring-indigo-500 border focus:border-indigo-500 block w-full pl-2 pr-12 sm:text-md border-gray-300 rounded-md" placeholder="00">
                                             <div class="absolute inset-y-0 right-0 flex items-center">
                                             <label for="sleep-time" class="sr-only">sleep-time</label>
                                             <div>
-																							<div class="max-w-screen-2xl">
+																							<div class="max-w-screen-2xl mt-1">
 																									<div
 																													x-data="select({ data: { am: 'AM', pm: 'PM'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'nivel_de_actividad_fisica', placeholder: 'AM' })"
 																													x-init="init()"
@@ -982,13 +989,13 @@
                                         </div>
 
                                         <div class="col-span-6 sm:col-span-2">
-                                          <label for="hungry-time" class="block text-sm font-medium text-gray-500">Hora con más hambre</label>
+                                          <label for="hungry-time" class="text-sm">Hora con más hambre</label>
                                           <div class="mt-1 relative rounded-md">
                                             <input type="text" name="hungry-time" id="hungry-time" class="mt-1 p-2 h-10 focus:ring-indigo-500 border focus:border-indigo-500 block w-full pl-2 pr-12 sm:text-md border-gray-300 rounded-md" placeholder="00">
                                             <div class="absolute inset-y-0 right-0 flex items-center">
                                             <label for="hungry-time" class="sr-only">hungry-time</label>
                                             <div>
-																							<div class="max-w-screen-2xl">
+																							<div class="max-w-screen-2xl mt-1">
 																									<div
 																													x-data="select({ data: { am: 'AM', pm: 'PM'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'nivel_de_actividad_fisica', placeholder: 'AM' })"
 																													x-init="init()"
@@ -1195,10 +1202,10 @@
                                         <div class="col-span-6 sm:col-span-4">
                                          
 																						<div>
-																						<label id="listbox-label-prepare-food" class="block text-sm font-medium text-gray-500">
+																						<label id="listbox-label-prepare-food" class="text-sm">
 																							Tiempo empleado para preparar alimentos
 																						</label>
-																						<div class="max-w-screen-2xl">
+																						<div class="max-w-screen-2xl mt-1">
 																								<div
 																												x-data="select({ data: { no: 'No cocina', min: '30 minutos al día', hrs: '1 - 2 horas al día', fines: 'Sólo fines de semana'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'nivel_de_actividad_fisica', placeholder: 'Elige una opción' })"
 																												x-init="init()"
@@ -1212,7 +1219,7 @@
 																																			@click="toggleListboxVisibility()"
 																																			:aria-expanded="open"
 																																			aria-haspopup="listbox"
-																																			class="relative z-0 w-full py-2 pl-3 pr-10 text-left transition duration-150 ease-in-out bg-white border border-white rounded-md cursor-default focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5"
+																																			class="relative z-0 w-full py-2 pl-3 pr-10 text-left transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md cursor-default focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5"
 																															>
 																																		<span
 																																						x-show="! open"
@@ -1410,14 +1417,14 @@
                 <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6 mt-6"> <!-- Inicia card dieta habitual --> 
                   <div class="md:grid md:grid-cols-3 md:gap-6">
                       <div class="md:col-span-3">
-                          <h3 class="text-lg font-medium leading-6 text-gray-900">Dieta habitual</h3>
+                          <h3 >Dieta habitual</h3>
                           <div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0">
                           </div>
                       
                           <div class="mt-5 md:mt-5 md:col-span-3">
                             
                             <div>
-                              <label for="breakfast" class="block text-sm font-medium text-gray-500">Desayuno</label>
+                              <label for="breakfast" class="text-sm">Desayuno</label>
                               <div class="flex flex-col mt-3">
                                 <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                                   <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -1425,16 +1432,16 @@
                                       <table class="min-w-full  divide-y divide-gray-200 table-fixed">
                                         <thead class="bg-gray-50">
                                           <tr>
-                                            <th scope="col" class="w-1/6 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            <th scope="col" class="w-1/6 px-6 py-3 text-left text-xs medium uppercase tracking-wider">
                                               Horario
                                             </th>
-                                            <th scope="col" class="w-1/6 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            <th scope="col" class="w-1/6 px-6 py-3 text-left text-xs medium uppercase tracking-wider">
                                               Lugar
                                             </th>
-                                            <th scope="col" class="w-1/6 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            <th scope="col" class="w-1/6 px-6 py-3 text-left text-xs medium uppercase tracking-wider">
                                               Tipo
                                             </th>
-                                            <th scope="col" class="w-3/6 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            <th scope="col" class="w-3/6 px-6 py-3 text-left text-xs medium uppercase tracking-wider">
                                               Descripción
                                             </th>
                                       
@@ -1449,7 +1456,7 @@
                                               
 																							<div>
 																						
-																						<div class="max-w-screen-2xl">
+																						<div class="max-w-screen-2xl mt-1">
 																								<div
 																												x-data="select({ data: { casa: 'Casa', trabajo: 'Trabajo', establecimiento: 'Establecimiento'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'place_breakfast', placeholder: 'Elige una opción' })"
 																												x-init="init()"
@@ -1654,7 +1661,7 @@
 
 																							<div>
 																						
-																						<div class="max-w-screen-2xl">
+																						<div class="max-w-screen-2xl mt-1">
 																								<div
 																												x-data="select({ data: { preparado: 'Preparado', comprada: 'Comprada', comedor: 'Comedor'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'type_food', placeholder: 'Elige una opción' })"
 																												x-init="init()"
@@ -1871,7 +1878,7 @@
                             </div>
 
                             <div class="mt-4">
-                              <label for="breakfast" class="block text-sm font-medium text-gray-500">Colación</label>
+                              <label for="breakfast" class="text-sm">Colación</label>
                               <div class="flex flex-col mt-3">
                                 <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                                   <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -1879,16 +1886,16 @@
                                       <table class="min-w-full  divide-y divide-gray-200 table-fixed">
                                         <thead class="bg-gray-50">
                                           <tr>
-                                            <th scope="col" class="w-1/6 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            <th scope="col" class="w-1/6 px-6 py-3 text-left text-xs medium uppercase tracking-wider">
                                               Horario
                                             </th>
-                                            <th scope="col" class="w-1/6 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            <th scope="col" class="w-1/6 px-6 py-3 text-left text-xs medium uppercase tracking-wider">
                                               Lugar
                                             </th>
-                                            <th scope="col" class="w-1/6 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            <th scope="col" class="w-1/6 px-6 py-3 text-left text-xs medium uppercase tracking-wider">
                                               Tipo
                                             </th>
-                                            <th scope="col" class="w-3/6 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            <th scope="col" class="w-3/6 px-6 py-3 text-left text-xs medium uppercase tracking-wider">
                                               Descripción
                                             </th>
                                       
@@ -1903,7 +1910,7 @@
                                               
 																							<div>
 																						
-																						<div class="max-w-screen-2xl">
+																						<div class="max-w-screen-2xl mt-1">
 																								<div
 																												x-data="select({ data: { casa: 'Casa', trabajo: 'Trabajo', establecimiento: 'Establecimiento'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'nivel_de_actividad_fisica', placeholder: 'Elige una opción' })"
 																												x-init="init()"
@@ -2108,7 +2115,7 @@
                                               
 																							<div>
 																						
-																						<div class="max-w-screen-2xl">
+																						<div class="max-w-screen-2xl mt-1">
 																								<div
 																												x-data="select({ data: { preparado: 'Preparado', comprada: 'Comprada', comedor: 'Comedor'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'type_food', placeholder: 'Elige una opción' })"
 																												x-init="init()"
@@ -2337,7 +2344,7 @@
 							<div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
 									<div class="md:grid md:grid-cols-3 md:gap-6">
 											<div class="md:col-span-3">
-													<h3 class="text-lg font-medium leading-6 text-gray-900">Relación con los alimentos</h3>
+													<h3 >Relación con los alimentos</h3>
 													<div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
 											
 													<div class="mt-5 md:mt-5 md:col-span-3">
@@ -2348,10 +2355,10 @@
 																				<!--Select-->
 																	
 																	<div>
-																	<label id="listbox-label-distracts" class="block text-sm font-medium text-gray-500">
+																	<label id="listbox-label-distracts" class="text-sm">
 																			Distractores a la hora de comer
 																	</label>
-																	<div class="max-w-screen-2xl">
+																	<div class="max-w-screen-2xl mt-1">
 																			<div
 																							x-data="select({ data: { tv: 'Televisión', cel: 'Celular', compu: 'Computadora'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'distracts', placeholder: 'Elige una opción' })"
 																							x-init="init()"
@@ -2559,10 +2566,10 @@
 																				<!--Select-->
 																	
 																	<div>
-																		<label id="listbox-label-distracts" class="block text-sm font-medium text-gray-500">
+																		<label id="listbox-label-distracts" class="text-sm">
 																				Ansiedad al comer (escala del 1 al 10)
 																		</label>
-																		<div class="max-w-screen-2xl">
+																		<div class="max-w-screen-2xl mt-1">
 																				<div
 																								x-data="select({ data: { 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'distracts', placeholder: 'Elige una opción' })"
 																								x-init="init()"
@@ -2768,8 +2775,8 @@
 
 																			
 																			<div class="col-span-6 sm:col-span-6 mt-2">
-																				<label for="motive" class="block text-sm font-medium text-gray-500">Alimento(s) que provocan preocupación, incomodidad o ansiedad</label>
-																				<input type="text" name="motive" id="motive" autocomplete="motive" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+																				<label for="motive" class="text-sm">Alimento(s) que provocan preocupación, incomodidad o ansiedad</label>
+																				<input type="text" name="motive" id="motive" autocomplete="motive" class="placeholder">
 																		</div>
 																			
 																	</div>
@@ -2785,7 +2792,7 @@
 							<div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
 									<div class="md:grid md:grid-cols-3 md:gap-6">
 											<div class="md:col-span-3">
-													<h3 class="text-lg font-medium leading-6 text-gray-900">Frecuencia de los alimetos</h3>
+													<h3 >Frecuencia de los alimetos</h3>
 													<div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
 											
 													<div class="mt-5 md:mt-5 md:col-span-3">
@@ -2796,10 +2803,10 @@
 																				<!--Select-->
 																	
 																	<div>
-																	<label id="listbox-label-vegetables" class="block text-sm font-medium text-gray-500">
+																	<label id="listbox-label-vegetables" class="text-sm">
 																			Verduras
 																	</label>
-																	<div class="max-w-screen-2xl">
+																	<div class="max-w-screen-2xl mt-1">
 																			<div
 																							x-data="select({ data: { diariamente: 'Diariamente', uno: '1 - 2 veces a la semana', tres: '3 - 5 veces a la semana', mes: '1 - 2 veces al mes', nunca: 'Nunca'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'distracts', placeholder: 'Elige una opción' })"
 																							x-init="init()"
@@ -3007,10 +3014,10 @@
 																				<!--Select-->
 																	
 																	<div>
-																		<label id="listbox-label-fruits" class="block text-sm font-medium text-gray-500">
+																		<label id="listbox-label-fruits" class="text-sm">
 																				Frutas
 																		</label>
-																		<div class="max-w-screen-2xl">
+																		<div class="max-w-screen-2xl mt-1">
 																				<div
 																								x-data="select({ data: { diariamente: 'Diariamente', uno: '1 - 2 veces a la semana', tres: '3 - 5 veces a la semana', mes: '1 - 2 veces al mes', nunca: 'Nunca'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'distracts', placeholder: 'Elige una opción' })"
 																								x-init="init()"
@@ -3218,10 +3225,10 @@
 																					<!--Select-->
 																		
 																		<div>
-																		<label id="listbox-label-cereals" class="block text-sm font-medium text-gray-500">
+																		<label id="listbox-label-cereals" class="text-sm">
 																				Cereales y Tuberculos
 																		</label>
-																		<div class="max-w-screen-2xl">
+																		<div class="max-w-screen-2xl mt-1">
 																				<div
 																								x-data="select({ data: { diariamente: 'Diariamente', uno: '1 - 2 veces a la semana', tres: '3 - 5 veces a la semana', mes: '1 - 2 veces al mes', nunca: 'Nunca'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'cereals', placeholder: 'Elige una opción' })"
 																								x-init="init()"
@@ -3429,10 +3436,10 @@
 																					<!--Select-->
 																		
 																		<div>
-																			<label id="listbox-label-legums" class="block text-sm font-medium text-gray-500">
+																			<label id="listbox-label-legums" class="text-sm">
 																					Leguminosas
 																			</label>
-																			<div class="max-w-screen-2xl">
+																			<div class="max-w-screen-2xl mt-1">
 																					<div
 																									x-data="select({ data: { diariamente: 'Diariamente', uno: '1 - 2 veces a la semana', tres: '3 - 5 veces a la semana', mes: '1 - 2 veces al mes', nunca: 'Nunca'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'legums', placeholder: 'Elige una opción' })"
 																									x-init="init()"
@@ -3640,10 +3647,10 @@
 																					<!--Select-->
 																		
 																		<div>
-																		<label id="listbox-label-beef" class="block text-sm font-medium text-gray-500">
+																		<label id="listbox-label-beef" class="text-sm">
 																				Carne de res
 																		</label>
-																		<div class="max-w-screen-2xl">
+																		<div class="max-w-screen-2xl mt-1">
 																				<div
 																								x-data="select({ data: { diariamente: 'Diariamente', uno: '1 - 2 veces a la semana', tres: '3 - 5 veces a la semana', mes: '1 - 2 veces al mes', nunca: 'Nunca'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'beef', placeholder: 'Elige una opción' })"
 																								x-init="init()"
@@ -3851,10 +3858,10 @@
 																					<!--Select-->
 																		
 																		<div>
-																			<label id="listbox-label-chicken" class="block text-sm font-medium text-gray-500">
+																			<label id="listbox-label-chicken" class="text-sm">
 																					Pollo
 																			</label>
-																			<div class="max-w-screen-2xl">
+																			<div class="max-w-screen-2xl mt-1">
 																					<div
 																									x-data="select({ data: { diariamente: 'Diariamente', uno: '1 - 2 veces a la semana', tres: '3 - 5 veces a la semana', mes: '1 - 2 veces al mes', nunca: 'Nunca'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'chicken', placeholder: 'Elige una opción' })"
 																									x-init="init()"
@@ -4062,10 +4069,10 @@
 																					<!--Select-->
 																		
 																		<div>
-																		<label id="listbox-label-fish" class="block text-sm font-medium text-gray-500">
+																		<label id="listbox-label-fish" class="text-sm">
 																				Pescados y mariscos
 																		</label>
-																		<div class="max-w-screen-2xl">
+																		<div class="max-w-screen-2xl mt-1">
 																				<div
 																								x-data="select({ data: { diariamente: 'Diariamente', uno: '1 - 2 veces a la semana', tres: '3 - 5 veces a la semana', mes: '1 - 2 veces al mes', nunca: 'Nunca'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'fish', placeholder: 'Elige una opción' })"
 																								x-init="init()"
@@ -4273,10 +4280,10 @@
 																					<!--Select-->
 																		
 																		<div>
-																			<label id="listbox-label-pork" class="block text-sm font-medium text-gray-500">
+																			<label id="listbox-label-pork" class="text-sm">
 																					Carne de cerdo
 																			</label>
-																			<div class="max-w-screen-2xl">
+																			<div class="max-w-screen-2xl mt-1">
 																					<div
 																									x-data="select({ data: { diariamente: 'Diariamente', uno: '1 - 2 veces a la semana', tres: '3 - 5 veces a la semana', mes: '1 - 2 veces al mes', nunca: 'Nunca'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'pork', placeholder: 'Elige una opción' })"
 																									x-init="init()"
@@ -4484,10 +4491,10 @@
 																					<!--Select-->
 																		
 																		<div>
-																		<label id="listbox-label-sausages" class="block text-sm font-medium text-gray-500">
+																		<label id="listbox-label-sausages" class="text-sm">
 																				Embutidos
 																		</label>
-																		<div class="max-w-screen-2xl">
+																		<div class="max-w-screen-2xl mt-1">
 																				<div
 																								x-data="select({ data: { diariamente: 'Diariamente', uno: '1 - 2 veces a la semana', tres: '3 - 5 veces a la semana', mes: '1 - 2 veces al mes', nunca: 'Nunca'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'sausages', placeholder: 'Elige una opción' })"
 																								x-init="init()"
@@ -4695,10 +4702,10 @@
 																					<!--Select-->
 																		
 																		<div>
-																			<label id="listbox-label-egg" class="block text-sm font-medium text-gray-500">
+																			<label id="listbox-label-egg" class="text-sm">
 																					Huevo
 																			</label>
-																			<div class="max-w-screen-2xl">
+																			<div class="max-w-screen-2xl mt-1">
 																					<div
 																									x-data="select({ data: { diariamente: 'Diariamente', uno: '1 - 2 veces a la semana', tres: '3 - 5 veces a la semana', mes: '1 - 2 veces al mes', nunca: 'Nunca'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'egg', placeholder: 'Elige una opción' })"
 																									x-init="init()"
@@ -4906,10 +4913,10 @@
 																					<!--Select-->
 																		
 																		<div>
-																		<label id="listbox-label-milk" class="block text-sm font-medium text-gray-500">
+																		<label id="listbox-label-milk" class="text-sm">
 																				Leche
 																		</label>
-																		<div class="max-w-screen-2xl">
+																		<div class="max-w-screen-2xl mt-1">
 																				<div
 																								x-data="select({ data: { diariamente: 'Diariamente', uno: '1 - 2 veces a la semana', tres: '3 - 5 veces a la semana', mes: '1 - 2 veces al mes', nunca: 'Nunca'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'milk', placeholder: 'Elige una opción' })"
 																								x-init="init()"
@@ -5117,10 +5124,10 @@
 																					<!--Select-->
 																		
 																		<div>
-																			<label id="listbox-label-milk-type" class="block text-sm font-medium text-gray-500">
+																			<label id="listbox-label-milk-type" class="text-sm">
 																					Tipo de Leche
 																			</label>
-																			<div class="max-w-screen-2xl">
+																			<div class="max-w-screen-2xl mt-1">
 																					<div
 																									x-data="select({ data: { entera: 'Entera', descremada: 'Descremada (light)', semidescremada: 'Semidescremada', deslactosada: 'Deslactosada', lechadas: 'Lechadas (almendras, coco)'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'milk-type', placeholder: 'Elige una opción' })"
 																									x-init="init()"
@@ -5328,10 +5335,10 @@
 																					<!--Select-->
 																		
 																		<div>
-																		<label id="listbox-label-yogurt" class="block text-sm font-medium text-gray-500">
+																		<label id="listbox-label-yogurt" class="text-sm">
 																				Yogurt
 																		</label>
-																		<div class="max-w-screen-2xl">
+																		<div class="max-w-screen-2xl mt-1">
 																				<div
 																								x-data="select({ data: { diariamente: 'Diariamente', uno: '1 - 2 veces a la semana', tres: '3 - 5 veces a la semana', mes: '1 - 2 veces al mes', nunca: 'Nunca'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'yogurt', placeholder: 'Elige una opción' })"
 																								x-init="init()"
@@ -5539,10 +5546,10 @@
 																					<!--Select-->
 																		
 																		<div>
-																			<label id="listbox-label-cheese" class="block text-sm font-medium text-gray-500">
+																			<label id="listbox-label-cheese" class="text-sm">
 																					Queso
 																			</label>
-																			<div class="max-w-screen-2xl">
+																			<div class="max-w-screen-2xl mt-1">
 																					<div
 																									x-data="select({ data: { diariamente: 'Diariamente', uno: '1 - 2 veces a la semana', tres: '3 - 5 veces a la semana', mes: '1 - 2 veces al mes', nunca: 'Nunca'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'cheese', placeholder: 'Elige una opción' })"
 																									x-init="init()"
@@ -5750,10 +5757,10 @@
 																					<!--Select-->
 																		
 																		<div>
-																		<label id="listbox-label-nuts" class="block text-sm font-medium text-gray-500">
+																		<label id="listbox-label-nuts" class="text-sm">
 																				Nueces y semillas
 																		</label>
-																		<div class="max-w-screen-2xl">
+																		<div class="max-w-screen-2xl mt-1">
 																				<div
 																								x-data="select({ data: { diariamente: 'Diariamente', uno: '1 - 2 veces a la semana', tres: '3 - 5 veces a la semana', mes: '1 - 2 veces al mes', nunca: 'Nunca'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'nuts', placeholder: 'Elige una opción' })"
 																								x-init="init()"
@@ -5961,10 +5968,10 @@
 																					<!--Select-->
 																		
 																		<div>
-																			<label id="listbox-label-coffe" class="block text-sm font-medium text-gray-500">
+																			<label id="listbox-label-coffe" class="text-sm">
 																					Café
 																			</label>
-																			<div class="max-w-screen-2xl">
+																			<div class="max-w-screen-2xl mt-1">
 																					<div
 																									x-data="select({ data: { diariamente: 'Diariamente', uno: '1 - 2 veces a la semana', tres: '3 - 5 veces a la semana', mes: '1 - 2 veces al mes', nunca: 'Nunca'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'coffe', placeholder: 'Elige una opción' })"
 																									x-init="init()"
@@ -6172,10 +6179,10 @@
 																					<!--Select-->
 																		
 																		<div>
-																		<label id="listbox-label-sugary-drinks" class="block text-sm font-medium text-gray-500">
+																		<label id="listbox-label-sugary-drinks" class="text-sm">
 																				Bebidas azucaradas
 																		</label>
-																		<div class="max-w-screen-2xl">
+																		<div class="max-w-screen-2xl mt-1">
 																				<div
 																								x-data="select({ data: { diariamente: 'Diariamente', uno: '1 - 2 veces a la semana', tres: '3 - 5 veces a la semana', mes: '1 - 2 veces al mes', nunca: 'Nunca'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'sugary-drinks', placeholder: 'Elige una opción' })"
 																								x-init="init()"
@@ -6383,10 +6390,10 @@
 																					<!--Select-->
 																		
 																		<div>
-																			<label id="listbox-label-snacks" class="block text-sm font-medium text-gray-500">
+																			<label id="listbox-label-snacks" class="text-sm">
 																					Botanas
 																			</label>
-																			<div class="max-w-screen-2xl">
+																			<div class="max-w-screen-2xl mt-1">
 																					<div
 																									x-data="select({ data: { diariamente: 'Diariamente', uno: '1 - 2 veces a la semana', tres: '3 - 5 veces a la semana', mes: '1 - 2 veces al mes', nunca: 'Nunca'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'snacks', placeholder: 'Elige una opción' })"
 																									x-init="init()"
@@ -6594,10 +6601,10 @@
 																					<!--Select-->
 																		
 																		<div>
-																		<label id="listbox-label-water" class="block text-sm font-medium text-gray-500">
+																		<label id="listbox-label-water" class="text-sm">
 																			Consumo de agua natural al día 
 																		</label>
-																		<div class="max-w-screen-2xl">
+																		<div class="max-w-screen-2xl mt-1">
 																				<div
 																								x-data="select({ data: { menos: 'Menos de un litro', uno: 'De 1 a 2 litros', mas: 'Más de 2 litros', sin: 'Sin registro'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'water', placeholder: 'Elige una opción' })"
 																								x-init="init()"

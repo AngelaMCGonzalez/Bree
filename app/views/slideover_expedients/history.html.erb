@@ -56,6 +56,8 @@
                         <option>Generales</option>
                 
                         <option selected>Historial</option>
+
+												<option>Antropométrico</option>
                 
                         <option>Hábitos</option>
                 
@@ -73,6 +75,10 @@
 
                         <a href="history" class= "bg-indigo-100 text-indigo-700 px-3 py-2 font-medium text-sm rounded-md" aria-current="page">
                         Historial
+                        </a>
+
+												<a href="anthropometric" class=" text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md">
+                        Antropométrico
                         </a>
                 
                         <a href="habits" class="text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md">
@@ -92,123 +98,121 @@
   
             </div>
 						
-            <div class="mt-2 relative flex-1 overflow-y-auto">
+             <div class="mt-2 relative flex-1 overflow-y-auto">
               <!-- Replace with your content --> 
-						
-            	<div class="bg-gray-100 w-full px-6 py-5">
-               
-								<h3 >Clínico</h3>
-                <div class="bg-white shadow px-4 py-5 mt-6 sm:rounded-lg sm:p-6">
+            <div class="bg-gray-100 w-full px-6 py-5">
+                <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
                     <div class="md:grid md:grid-cols-3 md:gap-6">
                         <div class="md:col-span-3">
                             <h3>Antecedentes personales patológicos </h3>
                             <div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
+                        
                             <div class="mt-3 md:mt-3 md:col-span-3">
                                 <fieldset>
                                     <legend class="text-base font-medium text-gray-900"></legend>
 																		<div class="ml-3 text-md">
-																			<h4 class="font-medium text-gray-500">Enfermedades</h4>
+																			<h4 >Enfermedades</h4>
 																			</div>
 																			<div class="grid grid-cols-2 mt-4">
 																				<div class="mt-4">
-																					<label  class="font-medium text-gray-500">
-																						<input type="checkbox" id="ninguna" name="ninguna" class="input-checkbox"/>
+																					<label  class="medium">
+																						<input type="checkbox" id="ninguna" name="ninguna" class="checkbox"/>
 																						Ninguna
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label  class="font-medium text-gray-500">
-																						<input type="checkbox" id="diabetes1" name="diabetes1" class="input-checkbox"/>
+																					<label  class="medium">
+																						<input type="checkbox" id="diabetes1" name="diabetes1" class="checkbox"/>
 																						Diabetes tipo I
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label  class="font-medium text-gray-500">
-																						<input type="checkbox" id="diabetes2" name="diabetes2" class="input-checkbox"/>
+																					<label  class="medium">
+																						<input type="checkbox" id="diabetes2" name="diabetes2" class="checkbox"/>
 																						Diabetes tipo II
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label  class="font-medium text-gray-500">
-																						<input type="checkbox" id="gestational" name="gestational" class="input-checkbox"/>
+																					<label  class="medium">
+																						<input type="checkbox" id="gestational" name="gestational" class="checkbox"/>
 																						Diabetes gestacional 
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label  class="font-medium text-gray-500">
-																						<input type="checkbox" id="hypertension" name="hypertension" class="input-checkbox"/>
+																					<label  class="medium">
+																						<input type="checkbox" id="hypertension" name="hypertension" class="checkbox"/>
 																						Hipertensión arterial 
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label class="font-medium text-gray-500">
-																						<input type="checkbox" id="cholesterol" name="cholesterol" class="input-checkbox"/>
+																					<label class="medium">
+																						<input type="checkbox" id="cholesterol" name="cholesterol" class="checkbox"/>
 																						Colesterol elevado
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label class="font-medium text-gray-500">
-																						<input type="checkbox" id="triglycerides" name="triglycerides" class="input-checkbox"/>
+																					<label class="medium">
+																						<input type="checkbox" id="triglycerides" name="triglycerides" class="checkbox"/>
 																						Trigliceridos elevados
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label class="font-medium text-gray-500">
-																						<input type="checkbox" id="cardiovascular" name="cardiovascular" class="input-checkbox"/>
+																					<label class="medium">
+																						<input type="checkbox" id="cardiovascular" name="cardiovascular" class="checkbox"/>
 																						Enfermedad cardiovascular 
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label class="font-medium text-gray-500">
-																						<input type="checkbox" id="overweight" name="overweight" class="input-checkbox"/>
+																					<label class="medium">
+																						<input type="checkbox" id="overweight" name="overweight" class="checkbox"/>
 																						Sobrepeso
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label class="font-medium text-gray-500">
-																						<input type="checkbox" id="obesity" name="obesity" class="input-checkbox"/>
+																					<label class="medium">
+																						<input type="checkbox" id="obesity" name="obesity" class="checkbox"/>
 																						Obesidad 
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label class="font-medium text-gray-500">
-																						<input type="checkbox" id="cancer" name="cancer" class="input-checkbox"/>
+																					<label class="medium">
+																						<input type="checkbox" id="cancer" name="cancer" class="checkbox"/>
 																						Cáncer
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label class="font-medium text-gray-500">
-																						<input type="checkbox" id="hypotheroidism" name="hypotheroidism" class="input-checkbox"/>
+																					<label class="medium">
+																						<input type="checkbox" id="hypotheroidism" name="hypotheroidism" class="checkbox"/>
 																						Hipotiroidismo
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label class="font-medium text-gray-500">
-																						<input type="checkbox" id="syndrome" name="syndrome" class="input-checkbox"/>
+																					<label class="medium">
+																						<input type="checkbox" id="syndrome" name="syndrome" class="checkbox"/>
 																						Síndrome de Ovario Poliquistico 
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label class="font-medium text-gray-500">
-																						<input type="checkbox" id="anemia" name="anemia" class="input-checkbox"/>
+																					<label class="medium">
+																						<input type="checkbox" id="anemia" name="anemia" class="checkbox"/>
 																						Anemia
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label class="font-medium text-gray-500">
-																						<input type="checkbox" id="depression" name="depression" class="input-checkbox"/>
+																					<label class="medium">
+																						<input type="checkbox" id="depression" name="depression" class="checkbox"/>
 																						Depresión 
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label class="font-medium text-gray-500">
-																						<input type="checkbox" id="anxiety" name="anxiety" class="input-checkbox"/>
+																					<label class="medium">
+																						<input type="checkbox" id="anxiety" name="anxiety" class="checkbox"/>
 																						Ansiedad 
 																					</label>
 																				</div>
 																				<div class="mt-4">
-																					<label class="font-medium text-gray-500">
-																						<input type="checkbox" id="disroders" name="disroders" class="input-checkbox"/>
+																					<label class="medium">
+																						<input type="checkbox" id="disroders" name="disroders" class="checkbox"/>
 																						Trastornos psicológicos 
 																					</label>
 																				</div>
@@ -220,33 +224,14 @@
                                 <div class="col-span-6 sm:col-span-4 mt-8">
 
 																	<div class="mt-3 md:mt-3 md:col-span-3">
-                                <div class="flex justify-between">
-                                    <label for="other_sick" class="block text-sm font-medium text-gray-500">Otra enfermedad</label> 
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-full text-indigo-600 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                        <!-- Heroicon name: outline/plus -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="-ml-0.5 mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                                        </svg>
-                                        Agregar
-                                    </button>
-                                </div>
-
-																
-                                    <input type="text" name="motive" id="motive" autocomplete="motive" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+                                    <label for="other_sick" class="text-sm">Otra enfermedad</label> 
+                                    <input type="text" name="motive" id="motive" autocomplete="motive" class="dropdown sm:text-md">
                                 </div>
 																<div class="col-span-6 sm:col-span-4 mt-8">
 																<div class="mt-3 md:mt-3 md:col-span-3">
-                                <div class="flex justify-between">
-                                    <label for="medication" class="block text-sm font-medium text-gray-500">Medicamento</label> 
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-full text-indigo-600 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                        <!-- Heroicon name: outline/plus -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="-ml-0.5 mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                                        </svg>
-                                        Agregar
-                                    </button>
-                                </div>
-																	<input type="text" name="medication" id="medication" autocomplete="medication" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+                                    <label for="medication" class="text-sm">Medicamento</label> 
+                                
+																	<input type="text" name="medication" id="medication" autocomplete="medication" class="dropdown sm:text-md">
 																	</div>
 																	<div class="grid grid-cols-6 gap-6">
 																		</div>
@@ -254,10 +239,10 @@
 																	
 																<div class="col-span-6 sm:col-span-6 mt-8">
 																	<div>
-																	<label id="listbox-label" class="block text-sm font-medium text-gray-500">
+																	<label id="listbox-label" class="text-sm">
 																			Cirugía
 																	</label>
-																	<div class="max-w-xs">
+																	<div class="max-w-xs mt-1">
 																			<div
 																							x-data="select({ data: { s: 'Si', n: 'No'}, emptyOptionsMessage: 'No se ha seleccionado una opción.', name: 'cirugia', placeholder: 'Elige una opción' })"
 																							x-init="init()"
@@ -458,54 +443,54 @@
 															</div>
 																<!--Fin select-->
 																<div class="ml-3 text-md mt-8">
-																	<h4" class="font-medium text-gray-500">Trastornos gastrointestinales</h4>
+																	<h4>Trastornos gastrointestinales</h4>
 																	</div>
-																	<div class="grid grid-cols-4 mt-4">
+																	<div class="grid grid-cols-3 mt-4">
 																	
 																			<div class="mt-4">
-																				<label  class="font-medium text-gray-500">
+																				<label  class="medium">
 																					<input type="checkbox" id="nausea" name="nausea" class="input-checkbox"/>
 																					Nauseas
 																				</label>
 																			</div>
 																			<div class="mt-4">
-																				<label  class="font-medium text-gray-500">
+																				<label  class="medium">
 																					<input type="checkbox" id="vomito" name="vomito" class="input-checkbox"/>
 																					Vómitos
 																				</label>
 																			</div>
 																			<div class="mt-4">
-																				<label  class="font-medium text-gray-500">
+																				<label  class="medium">
 																					<input type="checkbox" id="diarrhea" name="diarrhea" class="input-checkbox"/>
 																					Diarrea
 																				</label>
 																			</div>
 																			<div class="mt-4">
-																				<label  class="font-medium text-gray-500">
+																				<label  class="medium">
 																					<input type="checkbox" id="estrenimiento" name="estrenimiento" class="input-checkbox"/>
 																					Estreñimiento  
 																				</label>
 																			</div>
 																			<div class="mt-4">
-																				<label  class="font-medium text-gray-500">
+																				<label  class="medium">
 																					<input type="checkbox" id="inflammation" name="inflammation" class="input-checkbox"/>
 																					Inflamación abdominal  
 																				</label>
 																			</div>
 																			<div class="mt-4">
-																				<label class="font-medium text-gray-500">
+																				<label class="medium">
 																					<input type="checkbox" id="colitis" name="colitis" class="input-checkbox"/>
 																					Colitis 
 																				</label>
 																			</div>
 																			<div class="mt-4">
-																				<label class="font-medium text-gray-500">
+																				<label class="medium">
 																					<input type="checkbox" id="gastritis" name="gastritis" class="input-checkbox"/>
 																					Gastritis 
 																				</label>
 																			</div>
 																			<div class="mt-4">
-																				<label class="font-medium text-gray-500">
+																				<label class="medium">
 																					<input type="checkbox" id="reflux" name="reflux" class="input-checkbox"/>
 																					Reflujo 
 																				</label>
@@ -517,8 +502,8 @@
 															 
 														</fieldset>
 														<div class="col-span-6 sm:col-span-4 mt-8">
-																<label for="motive" class="block text-sm font-medium text-gray-500">Otro motivo</label>
-																<input type="text" name="motive" id="motive" autocomplete="motive" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+																<label for="motive" class="text-sm">Otro trastorno gastrointestinal</label>
+																<input type="text" name="motive" id="motive" autocomplete="motive" class="dropdown sm:text-md">
 														</div>
 												
                     </div>
@@ -534,6 +519,7 @@
         </div>
 				
       </div>
+			</div>
 
 			<!-- Exploración físico --> 
 			<div class="bg-gray-100 w-full px-6 py-5">
@@ -547,33 +533,33 @@
 												<form action="#" method="POST">
 														<div class="grid grid-cols-6 gap-6">
 																<div class="col-span-6 sm:col-span-3">
-																<label for="hair" class="block text-sm font-medium text-gray-500">Cabello</label>
+																<label for="hair" class="text-sm">Cabello</label>
 																<input type="text" name="hair" id="hair" autocomplete="hair" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
 																</div>
 										
 																<div class="col-span-6 sm:col-span-3">
-																<label for="skin" class="block text-sm font-medium text-gray-500">Piel</label>
-																<input type="text" name="skin" id="skin" autocomplete="skin" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+																<label for="skin" class="text-sm">Piel</label>
+																<input type="text" name="skin" id="skin" autocomplete="skin" class="dropdown sm:text-md">
 																</div>
 
 																<div class="col-span-6 sm:col-span-3">
-																<label for="eyes" class="block text-sm font-medium text-gray-500">Ojos</label>
+																<label for="eyes" class="text-sm">Ojos</label>
 																<input type="text" name="eyes" id="eyes" autocomplete="eyes" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
 																</div>
 											
 																<div class="col-span-6 sm:col-span-3">
-																<label for="nails" class="block text-sm font-medium text-gray-500">Uñas</label>
-																<input type="text" name="nails" id="nails" autocomplete="nails" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+																<label for="nails" class="text-sm">Uñas</label>
+																<input type="text" name="nails" id="nails" autocomplete="nails" class="dropdown sm:text-md">
 																</div>
 
 																<div class="col-span-6 sm:col-span-3">
-																<label for="mouth" class="block text-sm font-medium text-gray-500">Boca</label>
+																<label for="mouth" class="text-sm">Boca</label>
 																<input type="text" name="mouth" id="mouth" autocomplete="mouth" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
 																</div>
 											
 																<div class="col-span-6 sm:col-span-3">
-																<label for="blood-pressure" class="block text-sm font-medium text-gray-500">Presión arterial (mm Hg)</label>
-																<input type="text" name="blood-pressure" id="blood-pressure" autocomplete="blood-pressure" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+																<label for="blood-pressure" class="text-sm">Presión arterial (mm Hg)</label>
+																<input type="text" name="blood-pressure" id="blood-pressure" autocomplete="blood-pressure" class="dropdown sm:text-md">
 																</div>
 										
 																
@@ -601,10 +587,10 @@
 														<div class="grid grid-cols-6 gap-6">
 															<div class="col-span-6 sm:col-span-3">
 																<div>
-																<label id="listbox-label-alcohol" class="block text-sm font-medium text-gray-500">
+																<label id="listbox-label-alcohol" class="text-sm">
 																		Alcohol
 																</label>
-																<div class="max-w-xs">
+																<div class="max-w-xs mt-1">
 																		<div
 																		x-data="select({ data: { n: 'Nunca', n1: '1-2 días de la semana', n2: '3-5 días de la semana', d:'Diariamente'}, emptyOptionsMessage: 'No se ha seleccionado ninguna opción.', name: 'alcohol', placeholder: 'Elige una opción' })"
 																						x-init="init()"
@@ -806,10 +792,10 @@
 														<br>
 														<div class="col-span-6 sm:col-span-3">
 															<div>
-															<label id="listbox-label-tobacco" class="block text-sm font-medium text-gray-500">
+															<label id="listbox-label-tobacco" class="text-sm">
 																	Tabaco
 															</label>
-															<div class="max-w-xs">
+															<div class="max-w-xs mt-1">
 																	<div
 																					x-data="select({ data: { n: 'Nunca', n1: '1-2 días de la semana', n2: '3-5 días de la semana', d:'Diariamente'}, emptyOptionsMessage: 'No se ha seleccionado ninguna opción.', name: 'Tabaco', placeholder: 'Elige una opción' })"
 																					x-init="init()"
@@ -1038,7 +1024,7 @@
 																<div class="grid grid-cols-6 gap-6">
 																		
 																		<div class="col-span-6 sm:col-span-2">
-																		<label for="last-period" class="block text-sm font-medium text-gray-500">Última menstruación </label>
+																		<label for="last-period" class="text-sm">Última menstruación </label>
 																		<input type="date" placeholder="DD/MM/YY" name="me" id="last-period" autocomplete="last-period" class="mt-1 p-2 h-11 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
 																		</div>
 
@@ -1046,10 +1032,10 @@
 																		<br>
 																		<div class="col-span-6 sm:col-span-3">
 																				<div>
-																				<label id="listbox-label" class="block text-sm font-medium text-gray-500">
+																				<label id="listbox-label" class="text-sm">
 																						Anticonceptivos
 																				</label>
-																				<div class="max-w-xs">
+																				<div class="max-w-xs mt-1">
 																						<div
 																										x-data="select({ data: { pil: 'Píldora', dh: 'DIU hormonal', dc: 'DIU cobre', in:'Inyecciones', par:'Parches', im:'Implante', ot:'Otro'}, emptyOptionsMessage: 'No se ha seleccionado ninguna opción.', name: 'Anticonceptivo', placeholder: 'Elige una opción' })"
 																										x-init="init()"
@@ -1251,10 +1237,10 @@
 																		<br>
 																		<div class="col-span-6 sm:col-span-3">
 																			<div>
-																			<label id="listbox-label-pregnancy" class="block text-sm font-medium text-gray-500">
+																			<label id="listbox-label-pregnancy" class="text-sm">
 																					Embarazo
 																			</label>
-																			<div class="max-w-xs">
+																			<div class="max-w-xs mt-1">
 																					<div
 																					x-data="select({ data: { si: 'Si', no: 'No'}, emptyOptionsMessage: 'No se ha seleccionado ninguna opción.', name: 'Lactancia', placeholder: 'Elige una opción' })"
 																									x-init="init()"
@@ -1456,10 +1442,10 @@
 																	<br>
 																	<div class="col-span-6 sm:col-span-3">
 																		<div>
-																		<label id="listbox-label-breastfeeding" class="block text-sm font-medium text-gray-500">
+																		<label id="listbox-label-breastfeeding" class="text-sm">
 																				Lactancia
 																		</label>
-																		<div class="max-w-xs">
+																		<div class="max-w-xs mt-1">
 																				<div
 																				x-data="select({ data: { si: 'Si', no: 'No'}, emptyOptionsMessage: 'No se ha seleccionado ninguna opción.', name: 'Lactancia', placeholder: 'Elige una opción' })"
 																								x-init="init()"
@@ -1670,207 +1656,332 @@
 				</div>
 				<div class="bg-gray-100 w-full px-6 py-5">
 					<div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
-							<div class="md:grid md:grid-cols-3 md:gap-6">
-									<div class="md:col-span-3">
-											<h3 class="text-lg font-medium leading-6 text-gray-900">Laboratorios</h3>
-											<div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
-									
-											<div class="mt-5 md:mt-5 md:col-span-3">
-													<form action="#" method="POST">
-															<div class="grid grid-cols-6 gap-6">
-																	<div class="col-span-6 sm:col-span-3">
-																	<label for="blood-chemistry" class="block text-sm font-medium text-gray-500">Química sanguinea </label>
-																	<input type="date" name="blood-chemistry" id="blood-chemistry" autocomplete="blood-chimistry" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
-																	</div>
-											
-																	<div class="col-span-6 sm:col-span-3">
-																	<label for="upload-file-blood-cheistry" class="block text-sm font-medium text-white"></label>
-																	<input type="file" name="upload-file-blood-cheistry" id="upload-file-blood-cheistry" autocomplete="upload-file-blood-cheistry" class=" mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
-																	</div>
-																	
-																	<div class="col-span-6 sm:col-span-3">
-																		<label for="blood-biometry" class="block text-sm font-medium text-gray-500">Biometría hemática </label>
-																		<input type="date" name="blood-biometry" id="blood-biometry" autocomplete="blood-biometry" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
-																		</div>
-												
-																		<div class="col-span-6 sm:col-span-3">
-																		<label for="upload-file-biometry" class="block text-sm font-medium text-white"></label>
-																		<input type="file" name="upload-file-biometry" id="upload-file-biometry" autocomplete="upload-file-biometry" class=" mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
-																		</div>
-
-																		<div class="col-span-6 sm:col-span-3">
-																			<label for="urine-test" class="block text-sm font-medium text-gray-500">Examen general de orina  </label>
-																			<input type="date" name="urine-test" id="urine-test" autocomplete="urine-test" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
-																			</div>
-													
-																			<div class="col-span-6 sm:col-span-3">
-																			<label for="upload-file-urine-test" class="block text-sm font-medium text-white"></label>
-																			<input type="file" name="upload-file-urine-test" id="upload-file-urine-test" autocomplete="upload-file-urine-test" class=" mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
-																			</div>
-
-																			<div class="col-span-6 sm:col-span-3">
-																				<label for="lipid-profile" class="block text-sm font-medium text-gray-500">Perfil lipídico  </label>
-																				<input type="date" name="lipid-profile" id="lipid-profile" autocomplete="lipid-profile" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
-																				</div>
-														
-																				<div class="col-span-6 sm:col-span-3">
-																				<label for="upload-file-lipid-profile" class="block text-sm font-medium text-white"></label>
-																				<input type="file" name="upload-file-lipid-profile" id="upload-file-lipid-profile" autocomplete="upload-file-lipid-profile" class=" mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
-																				</div>
-
-																				<div class="col-span-6 sm:col-span-3">
-																					<label for="thyroid-profile" class="block text-sm font-medium text-gray-500">Perfil tiroideo  </label>
-																					<input type="date" name="thyroid-profile" id="thyroid-profile" autocomplete="thyroid-profile" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
-																					</div>
-															
-																					<div class="col-span-6 sm:col-span-3">
-																					<label for="upload-file-thyroid-profile" class="block text-sm font-medium text-white"></label>
-																					<input type="file" name="upload-file-thyroid-profile" id="upload-file-thyroid-profile" autocomplete="upload-file-thyroid-profile" class=" mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
-																					</div>
-
-															</div>
-													</form>
+							<!-- This example requires Tailwind CSS v2.0+ -->
+  
+								<div class="md:col-span-3">
+										<h3 class="text-lg font-medium leading-6 text-gray-900">Laboratorios</h3>
+      					</div>
+									<div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
+										<dl class="sm:divide-y sm:divide-gray-200">
+											<div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+												<dt class="text-sm medium">
+													Quìmica Sanguinea
+												</dt>
+												<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+													<button type="button" class="relative block w-full border-2 border-gray-300 border-dashed rounded-lg p-1 text-center hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+														<svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+															<path vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+														</svg>
+														<span class="mt-2 block text-sm font-medium text-gray-900">
+															Agregar estudio
+														</span>
+													</button>
+												</dd>
 											</div>
+											<div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+												<dt class="text-sm medium">
+													Biometría hemática
+												</dt>	
+												
+												<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+													<div class="flex justify-between">
+                              <label for="allergies" class="block text-sm font-medium text-white">Agregar</label> 
+                              <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-full text-indigo-600 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        <!-- Heroicon name: outline/plus -->
+                              <svg xmlns="http://www.w3.org/2000/svg" class="-ml-0.5 mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                              </svg>
+                               Agregar
+                             </button>
+                            </div>
+													<ul role="list" class="border border-gray-200 rounded-md divide-y divide-gray-200">
+													
+														<li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+														
+															<div class="w-0 flex-1 flex items-center">
+																<!-- Heroicon name: solid/paper-clip -->
+																<svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+																	<path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd" />
+																</svg>
+																<span class="ml-2 flex-1 w-0 truncate">
+																	resume_back_end_developer.pdf
+																</span>
+															</div>
+															<div class="ml-4 flex-shrink-0">
+															<span class="ml-4 flex-shrink-0 flex items-start space-x-4">
+																<button type="button" class="bg-white rounded-md font-medium text-gray-400 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+																	</svg>
+																</button>
+																<span class="text-gray-300" aria-hidden="true">|</span>
+																<button type="button" class="bg-white rounded-md font-medium text-gray-400 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+																	</svg>
+																</button>
+															</span>
+															</div>
+														</li>
+														<li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+															<div class="w-0 flex-1 flex items-center">
+																<!-- Heroicon name: solid/paper-clip -->
+																<svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+																	<path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd" />
+																</svg>
+																<span class="ml-2 flex-1 w-0 truncate">
+																	coverletter_back_end_developer.pdf
+																</span>
+															</div>
+															<div class="ml-4 flex-shrink-0">
+															<span class="ml-4 flex-shrink-0 flex items-start space-x-4">
+																<button type="button" class="bg-white rounded-md font-medium text-gray-400  hover:text-gray-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+																	</svg>
+																</button>
+																<span class="text-gray-300" aria-hidden="true">|</span>
+																<button type="button" class="bg-white rounded-md font-medium text-gray-400  hover:text-gray-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+																	</svg>
+																</button>
+															</span>
+															</div>
+														</li>
+													</ul>
+												</dd>
+											</div>
+											<div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+												<dt class="text-sm medium">
+													Examen general de orina
+												</dt>
+												<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+													<div class="flex justify-between">
+                              <label for="allergies" class="block text-sm font-medium text-white">Agregar</label> 
+                              <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-full text-indigo-600 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        <!-- Heroicon name: outline/plus -->
+                              <svg xmlns="http://www.w3.org/2000/svg" class="-ml-0.5 mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                              </svg>
+                               Agregar
+                             </button>
+                            </div>
+													<ul role="list" class="border border-gray-200 rounded-md divide-y divide-gray-200">
+													
+														<li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+														
+															<div class="w-0 flex-1 flex items-center">
+																<!-- Heroicon name: solid/paper-clip -->
+																<svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+																	<path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd" />
+																</svg>
+																<span class="ml-2 flex-1 w-0 truncate">
+																	resume_back_end_developer.pdf
+																</span>
+															</div>
+															<div class="ml-4 flex-shrink-0">
+															<span class="ml-4 flex-shrink-0 flex items-start space-x-4">
+																<button type="button" class="bg-white rounded-md font-medium text-gray-400  hover:text-gray-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+																	</svg>
+																</button>
+																<span class="text-gray-300" aria-hidden="true">|</span>
+																<button type="button" class="bg-white rounded-md font-medium text-gray-400  hover:text-gray-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+																	</svg>
+																</button>
+															</span>
+															</div>
+														</li>
+														<li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+															<div class="w-0 flex-1 flex items-center">
+																<!-- Heroicon name: solid/paper-clip -->
+																<svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+																	<path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd" />
+																</svg>
+																<span class="ml-2 flex-1 w-0 truncate">
+																	coverletter_back_end_developer.pdf
+																</span>
+															</div>
+															<div class="ml-4 flex-shrink-0">
+															<span class="ml-4 flex-shrink-0 flex items-start space-x-4">
+																<button type="button" class="bg-white rounded-md font-medium text-gray-400  hover:text-gray-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+																	</svg>
+																</button>
+																<span class="text-gray-300" aria-hidden="true">|</span>
+																<button type="button" class="bg-white rounded-md font-medium text-gray-400  hover:text-gray-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+																	</svg>
+																</button>
+															</span>
+															</div>
+														</li>
+													</ul>
+												</dd>
+											</div>
+											<div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+												<dt class="text-sm medium">
+													Perfil lipídico
+												</dt>
+												<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+													<div class="flex justify-between">
+                              <label for="allergies" class="block text-sm font-medium text-white">Agregar</label> 
+                              <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-full text-indigo-600 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        <!-- Heroicon name: outline/plus -->
+                              <svg xmlns="http://www.w3.org/2000/svg" class="-ml-0.5 mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                              </svg>
+                               Agregar
+                             </button>
+                            </div>
+													<ul role="list" class="border border-gray-200 rounded-md divide-y divide-gray-200">
+													
+														<li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+														
+															<div class="w-0 flex-1 flex items-center">
+																<!-- Heroicon name: solid/paper-clip -->
+																<svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+																	<path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd" />
+																</svg>
+																<span class="ml-2 flex-1 w-0 truncate">
+																	resume_back_end_developer.pdf
+																</span>
+															</div>
+															<div class="ml-4 flex-shrink-0">
+															<span class="ml-4 flex-shrink-0 flex items-start space-x-4">
+																<button type="button" class="bg-white rounded-md font-medium text-gray-400  hover:text-gray-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+																	</svg>
+																</button>
+																<span class="text-gray-300" aria-hidden="true">|</span>
+																<button type="button" class="bg-white rounded-md font-medium text-gray-400  hover:text-gray-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+																	</svg>
+																</button>
+															</span>
+															</div>
+														</li>
+														<li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+															<div class="w-0 flex-1 flex items-center">
+																<!-- Heroicon name: solid/paper-clip -->
+																<svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+																	<path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd" />
+																</svg>
+																<span class="ml-2 flex-1 w-0 truncate">
+																	coverletter_back_end_developer.pdf
+																</span>
+															</div>
+															<div class="ml-4 flex-shrink-0">
+															<span class="ml-4 flex-shrink-0 flex items-start space-x-4">
+																<button type="button" class="bg-white rounded-md font-medium text-gray-400  hover:text-gray-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+																	</svg>
+																</button>
+																<span class="text-gray-300" aria-hidden="true">|</span>
+																<button type="button" class="bg-white rounded-md font-medium text-gray-400  hover:text-gray-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+																	</svg>
+																</button>
+															</span>
+															</div>
+														</li>
+													</ul>
+												</dd>
+											</div>
+											<div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+												<dt class="text-sm medium">
+													Perfil tiroideo
+												</dt>
+												<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+													<div class="flex justify-between">
+                              <label for="allergies" class="block text-sm font-medium text-white">Agregar</label> 
+                              <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-full text-indigo-600 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        <!-- Heroicon name: outline/plus -->
+                              <svg xmlns="http://www.w3.org/2000/svg" class="-ml-0.5 mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                              </svg>
+                               Agregar
+                             </button>
+                            </div>
+													<ul role="list" class="border border-gray-200 rounded-md divide-y divide-gray-200">
+													
+														<li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+														
+															<div class="w-0 flex-1 flex items-center">
+																<!-- Heroicon name: solid/paper-clip -->
+																<svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+																	<path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd" />
+																</svg>
+																<span class="ml-2 flex-1 w-0 truncate">
+																	resume_back_end_developer.pdf
+																</span>
+															</div>
+															<div class="ml-4 flex-shrink-0">
+															<span class="ml-4 flex-shrink-0 flex items-start space-x-4">
+																<button type="button" class="bg-white rounded-md font-medium text-gray-400  hover:text-gray-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+																	</svg>
+																</button>
+																<span class="text-gray-300" aria-hidden="true">|</span>
+																<button type="button" class="bg-white rounded-md font-medium text-gray-400  hover:text-gray-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+																	</svg>
+																</button>
+															</span>
+															</div>
+														</li>
+														<li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+															<div class="w-0 flex-1 flex items-center">
+																<!-- Heroicon name: solid/paper-clip -->
+																<svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+																	<path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd" />
+																</svg>
+																<span class="ml-2 flex-1 w-0 truncate">
+																	coverletter_back_end_developer.pdf
+																</span>
+															</div>
+															<div class="ml-4 flex-shrink-0">
+															<span class="ml-4 flex-shrink-0 flex items-start space-x-4">
+																<button type="button" class="bg-white rounded-md font-medium text-gray-400  hover:text-gray-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+																	</svg>
+																</button>
+																<span class="text-gray-300" aria-hidden="true">|</span>
+																<button type="button" class="bg-white rounded-md font-medium text-gray-400  hover:text-gray-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+																	</svg>
+																</button>
+															</span>
+															</div>
+														</li>
+													</ul>
+												</dd>
+											</div>
+										</dl>
 									</div>
 							</div>
 					</div> <!-- fin card información personal-->
 
-					<!--I N I C I A   S E C C I Ó N   A N T R O P O M É T R I C O-->
-					<h3 class="mt-6 text-xl font-semibold text-gray-900" id="slide-over-title">Antropométrico</h3>
-
-					
-				</div>
-
-				<!-- Datos generales --> 
-			<div class="bg-gray-100 w-full px-6 py-5">
-				<div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
-						<div class="md:grid md:grid-cols-3 md:gap-6">
-								<div class="md:col-span-3">
-										<h3 class="text-lg font-medium leading-6 text-gray-900">Datos generales </h3>
-										<div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
-								
-										<div class="mt-5 md:mt-5 md:col-span-3">
-												<form action="#" method="POST">
-														<div class="grid grid-cols-6 gap-6">
-																<div class="col-span-6 sm:col-span-3">
-																<label for="size" class="block text-sm font-medium text-gray-500">Talla (m)</label>
-																<input type="number" step="any" name="size" id="size" autocomplete="size" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
-																</div>
-										
-																<div class="col-span-6 sm:col-span-3">
-																<label for="weight" class="block text-sm font-medium text-gray-500">Peso (kg)</label>
-																<input type="number" step="any" name="weight" id="weight" autocomplete="weight" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
-																</div>
-
-																<div class="col-span-6 sm:col-span-3">
-																<label for="imc" class="block text-sm font-medium text-gray-500">IMC (kg/m2)</label>
-																
-																	<h3 class="mt-1 p-2 h-11 border bg-gray-50 block w-full sm:text-md text-gray-400 border-gray-300 rounded-md">
-																			0
-																	</h3>
-																	
-															</div>
-											
-																<div class="col-span-6 sm:col-span-3">
-																<label for="normal-weight" class="block text-sm font-medium text-gray-500">Peso habitual (kg)</label>
-																<input type="number" step="any" name="normal-weight" id="normal-weight" autocomplete="normal-weight" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
-																</div>
-
-																
-														</div>
-												</form>
-										</div>
-								</div>
-						</div>
-				</div> <!-- fin card datos generales-->
-			</div>
-
-					<!-- Circunferencia --> 
-			<div class="bg-gray-100 w-full px-6 py-5">
-				<div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
-						<div class="md:grid md:grid-cols-3 md:gap-6">
-								<div class="md:col-span-3">
-										<h3 class="text-lg font-medium leading-6 text-gray-900">Circunferencia </h3>
-										<div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
-								
-										<div class="mt-5 md:mt-5 md:col-span-3">
-												<form action="#" method="POST">
-														<div class="grid grid-cols-6 gap-6">
-																<div class="col-span-6 sm:col-span-3">
-																	<label for="waist" class="block text-sm font-medium text-gray-500">Cintura (cm)</label>
-																	<input type="number" step="any" name="waist" id="waist" autocomplete="waist" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
-																</div>
-										
-																<div class="col-span-6 sm:col-span-3">
-																	<label for="hip" class="block text-sm font-medium text-gray-500">Cadera (cm)</label>
-																	<input type="number" step="any" name="hip" id="hip" autocomplete="hip" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
-																</div>
-
-																<div class="col-span-6 sm:col-span-3">
-																	<label for="relaxed-arm" class="block text-sm font-medium text-gray-500">Brazo relajado (cm)</label>
-																	<input type="number" step="any" name="relaxed-arm" id="relaxed-arm" autocomplete="relaxed-arm" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
-																</div>
-																
-																<div class="col-span-6 sm:col-span-3">
-																	<label for="contracted-arm" class="block text-sm font-medium text-gray-500">Brazo contraído (cm)</label>
-																	<input type="number" step="any" name="contracted-arm" id="contracted-arm" autocomplete="contracted-arm" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
-																</div>
-
-																<div class="col-span-6 sm:col-span-3">
-																	<label for="calf" class="block text-sm font-medium text-gray-500">Pantorrilla (cm)</label>
-																	<input type="number" step="any" name="calf" id="calf" autocomplete="calf" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
-																</div>
-
-																
-														</div>
-												</form>
-										</div>
-								</div>
-						</div>
-				</div> <!-- fin circunferencia-->
-			</div>
-					<!-- Composición corporal --> 
-			<div class="bg-gray-100 w-full px-6 py-5">
-				<div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
-						<div class="md:grid md:grid-cols-3 md:gap-6">
-								<div class="md:col-span-3">
-										<h3 class="text-lg font-medium leading-6 text-gray-900">Composición corporal </h3>
-										<div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
-								
-										<div class="mt-5 md:mt-5 md:col-span-3">
-												<form action="#" method="POST">
-														<div class="grid grid-cols-6 gap-6">
-																<div class="col-span-6 sm:col-span-3">
-																	<label for="fat-percentage" class="block text-sm font-medium text-gray-500">Porcentaje de grasa (%)</label>
-																	<input type="number" step="any" name="fat-percentage" id="fat-percentage" autocomplete="fat-percentage" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
-																</div>
-										
-																<div class="col-span-6 sm:col-span-3">
-																	<label for="kg-fat" class="block text-sm font-medium text-gray-500">Kg de grasa*</label>
-																	<h3 class="mt-1 p-2 h-11 border bg-gray-50 block w-full sm:text-md text-gray-400 border-gray-300 rounded-md">
-																		0%
-																	</h3>
-																</div>
-
-																<div class="col-span-6 sm:col-span-3">
-																	<label for="muscle-mass" class="block text-sm font-medium text-gray-500">Masa muscular (kg)</label>
-																	<input type="number" step="any" name="muscle-mass" id="muscle-mass" autocomplete="muscule-mass" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
-																</div>
-																
-																<div class="col-span-6 sm:col-span-3">
-																	<label for="body-water" class="block text-sm font-medium text-gray-500">Agua corporal (L)</label>
-																	<input type="number" step="any" name="body-water" id="body-water" autocomplete="body-water" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
-																</div>
-
-																<div class="col-span-6 sm:col-span-3">
-																	<label for="bioimpedance" class="block text-sm font-medium text-gray-500">Bioimpedancia</label>
-																	<input type="file" name="bioimpedance" id="bioimpedance" autocomplete="bioimpedance" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
-																</div>
-
-																
-														</div>
-												</form>
-										</div>
-								</div>
-						</div>
-				</div> <!-- fin Composición Corporal-->
+				

@@ -5,8 +5,10 @@ class SlideoverExpedientsController < ApplicationController
   end
   def history
   end
-  def fisical_activity
+  def physical_activity
   end
   def notes
+  end
+  def anthropometric
   end
 end

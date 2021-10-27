@@ -56,6 +56,8 @@
                         <option selected>Generales</option>
                 
                         <option>Historial</option>
+
+												<option >Antropométrico</option>
                 
                         <option>Hábitos</option>
                 
@@ -73,6 +75,10 @@
 
                         <a href="history" class="text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md">
                         Historial
+                        </a>
+
+												<a href="anthropometric" class=" text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md">
+                        Antropométrico
                         </a>
                 
                         <a href="habits" class="text-gray-500 hover:text-gray-700 px-3 py-2 font-medium text-sm rounded-md">
@@ -97,44 +103,44 @@
                 <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
                     <div class="md:grid md:grid-cols-3 md:gap-6">
                         <div class="md:col-span-3">
-                            <h3 class="text-lg font-medium leading-6 text-gray-900">Información Personal</h3>
+                            <h3>Información Personal</h3>
                             <div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
                         
                             <div class="mt-5 md:mt-5 md:col-span-3">
                                 <form action="#" method="POST">
                                     <div class="grid grid-cols-6 gap-6">
-                                        <div class="col-span-6 sm:col-span-6 mt-8">
-                                            <label for="motive" class="block text-sm font-medium text-gray-500">Nombre(s)</label>
-                                            <input type="text" name="motive" id="motive" autocomplete="motive" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+                                        <div class="col-span-6 sm:col-span-6 mt-4">
+                                            <label for="motive" class="text-sm">Nombre(s)</label>
+                                            <input type="text" name="motive" id="motive" autocomplete="motive" class="placeholder">
                                         </div>
 
                                         <div class="col-span-6 sm:col-span-3">
-                                        <label for="first-name" class="block text-sm font-medium text-gray-500">Apellido Paterno</label>
-                                        <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
+                                        <label for="first-name" class="text-sm">Apellido Paterno</label>
+                                        <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="placeholder">
                                         </div>
                             
                                         <div class="col-span-6 sm:col-span-3">
-                                        <label for="last-name" class="block text-sm font-medium text-gray-500">Apellido Materno</label>
-                                        <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+                                        <label for="last-name" class="text-sm">Apellido Materno</label>
+                                        <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="placeholder">
                                         </div>
                             
                                         <div class="col-span-6 sm:col-span-4">
-                                        <label for="email-address" class="block text-sm font-medium text-gray-500">Correo electrónico</label>
-                                        <input type="text" name="email-address" id="email-address" autocomplete="email" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+                                        <label for="email-address" class="text-sm">Correo electrónico</label>
+                                        <input type="text" name="email-address" id="email-address" autocomplete="email" class="placeholder">
                                         </div>
 
                                         <div class="col-span-6 sm:col-span-2">
-                                        <label for="phone" class="block text-sm font-medium text-gray-500">Celular</label>
-                                        <input type="text" name="phone" id="phone" autocomplete="phone" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+                                        <label for="phone" class="text-sm">Celular</label>
+                                        <input type="text" name="phone" id="phone" autocomplete="phone" class="placeholder">
                                         </div>
 
                                         <div class="col-span-6 sm:col-span-2">
-                                        <label for="birth-date" class="block text-sm font-medium text-gray-500">Fecha de nacimiento</label>
-                                        <input type="date" placeholder="DD/MM/YY" name="birth-date" id="irth-date" autocomplete="irth-date" class="mt-1 p-2 h-11 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+                                        <label for="birth-date" class="text-sm">Fecha de nacimiento</label>
+                                        <input type="date" placeholder="DD/MM/YY" name="birth-date" id="irth-date" autocomplete="irth-date" class="placeholder">
                                         </div>
 
                                         <div class="col-span-6 sm:col-span-2">
-                                        <label for="age" class="block text-sm font-medium text-gray-500">Edad</label>
+                                        <label for="age" class="text-sm">Edad</label>
                                         <h3 class="mt-1 p-2 h-11 border bg-gray-50 block w-full sm:text-md text-gray-400 border-gray-300 rounded-md">
                                             27
                                         </h3>
@@ -142,10 +148,10 @@
 
                                         <div class="col-span-6 sm:col-span-3">
                                             <div>
-                                            <label id="listbox-label-gener" class="block text-sm font-medium text-gray-500">
+                                            <label id="listbox-label-gener" class="text-sm">
                                                 Género
                                             </label>
-                                            <div class="max-w-xs">
+                                            <div class="max-w-xs mt-1">
                                                 <div
                                                         x-data="select({ data: { m: 'Masculino', f: 'Femenino'}, emptyOptionsMessage: 'No se ha seleccionado un género.', name: 'genero', placeholder: 'Elige un genero' })"
                                                         x-init="init()"
@@ -346,8 +352,8 @@
                                         </div>
                                         <br>
                                         <div class="col-span-6 sm:col-span-4">
-                                        <label for="occupation" class="block text-sm font-medium text-gray-500">Ocupación</label>
-                                        <input type="text" name="occupation" id="occupation" autocomplete="occupation" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+                                        <label for="occupation" class="text-sm">Ocupación</label>
+                                        <input type="text" name="occupation" id="occupation" autocomplete="occupation" class="placeholder">
                                         </div>
                                     </div>
                                 </form>
@@ -359,7 +365,7 @@
                 <div class="bg-white shadow px-4 py-5 mt-6 sm:rounded-lg sm:p-6">
                     <div class="md:grid md:grid-cols-3 md:gap-6">
                         <div class="md:col-span-3">
-                            <h3 class="text-lg font-medium leading-6 text-gray-900">Motivo de consulta</h3>
+                            <h3>Motivo de consulta</h3>
                             <div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
                             <div class="mt-3 md:mt-3 md:col-span-3">
                                 <fieldset>
@@ -367,97 +373,97 @@
                                     <div class="mt-4 space-y-4">
                                         <div class="flex items-start">
                                         <div class="h-5 flex items-center">
-                                            <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                            <input id="comments" name="comments" type="checkbox" class="checkbox">
                                         </div>
                                         <div class="ml-3 text-md">
-                                            <label for="comments" class="font-medium text-gray-500">Conocer mi estado nutricional</label>
+                                            <label for="comments" class="medium">Conocer mi estado nutricional</label>
                                         </div>
                                         </div>
                                         <div>
                                         <div class="flex items-start">
                                             <div class="h-5 flex items-center">
-                                            <input id="candidates" name="candidates" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                            <input id="candidates" name="candidates" type="checkbox" class="checkbox">
                                             </div>
                                             <div class="ml-3 text-md">
-                                            <label for="candidates" class="font-medium text-gray-500">Tener un estilo de vida saludable</label>
+                                            <label for="candidates" class="medium">Tener un estilo de vida saludable</label>
                                             </div>
                                         </div>
                                         </div>
                                         <div>
                                         <div class="flex items-start">
                                             <div class="h-5 flex items-center">
-                                            <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                            <input id="offers" name="offers" type="checkbox" class="checkbox">
                                             </div>
                                             <div class="ml-3 text-md">
-                                            <label for="offers" class="font-medium text-gray-500">Mejorar mi composición corporal</label>
+                                            <label for="offers" class="medium">Mejorar mi composición corporal</label>
                                             </div>
                                         </div>
                                         </div>
                                         <div>
                                             <div class="flex items-start">
                                                 <div class="h-5 flex items-center">
-                                                <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                <input id="offers" name="offers" type="checkbox" class="checkbox">
                                                 </div>
                                                 <div class="ml-3 text-md">
-                                                <label for="offers" class="font-medium text-gray-500">Perder peso</label>
+                                                <label for="offers" class="medium">Perder peso</label>
                                                 </div>
                                             </div>
                                             </div>
                                         <div>
                                             <div class="flex items-start">
                                                 <div class="h-5 flex items-center">
-                                                <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                <input id="offers" name="offers" type="checkbox" class="checkbox">
                                                 </div>
                                                 <div class="ml-3 text-md">
-                                                <label for="offers" class="font-medium text-gray-500">Aumentar de peso</label>
+                                                <label for="offers" class="medium">Aumentar de peso</label>
                                                 </div>
                                             </div>
                                             </div>
                                         <div>
                                             <div class="flex items-start">
                                                 <div class="h-5 flex items-center">
-                                                <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                <input id="offers" name="offers" type="checkbox" class="checkbox">
                                                 </div>
                                                 <div class="ml-3 text-md">
-                                                <label for="offers" class="font-medium text-gray-500">Mantener mi condición física</label>
+                                                <label for="offers" class="medium">Mantener mi condición física</label>
                                                 </div>
                                             </div>
                                             </div>
                                         <div>
                                             <div class="flex items-start">
                                                 <div class="h-5 flex items-center">
-                                                <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                <input id="offers" name="offers" type="checkbox" class="checkbox">
                                                 </div>
                                                 <div class="ml-3 text-md">
-                                                <label for="offers" class="font-medium text-gray-500">Control de enfermedad </label>
+                                                <label for="offers" class="medium">Control de enfermedad </label>
                                                 </div>
                                             </div>
                                             </div>
                                         <div>
                                             <div class="flex items-start">
                                                 <div class="h-5 flex items-center">
-                                                <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                <input id="offers" name="offers" type="checkbox" class="checkbox">
                                                 </div>
                                                 <div class="ml-3 text-md">
-                                                <label for="offers" class="font-medium text-gray-500">Embarazo/ Lactancia </label>
+                                                <label for="offers" class="medium">Embarazo/ Lactancia </label>
                                                 </div>
                                             </div>
                                             </div>
                                         <div>
                                             <div class="flex items-start">
                                                 <div class="h-5 flex items-center">
-                                                <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                <input id="offers" name="offers" type="checkbox" class="checkbox">
                                                 </div>
                                                 <div class="ml-3 text-md">
-                                                <label for="offers" class="font-medium text-gray-500">Deportivo</label>
+                                                <label for="offers" class="medium">Deportivo</label>
                                                 </div>
                                             </div>
                                             </div>
                                     </div>
                                 </fieldset>
                                 <div class="col-span-6 sm:col-span-4 mt-8">
-                                    <label for="motive" class="block text-sm font-medium text-gray-500">Otro motivo</label>
-                                    <input type="text" name="motive" id="motive" autocomplete="motive" class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+                                    <label for="motive" class="text-sm">Otro motivo</label>
+                                    <input type="text" name="motive" id="motive" autocomplete="motive" class="placeholder">
                                 </div>
                             </div>
                         </div>
