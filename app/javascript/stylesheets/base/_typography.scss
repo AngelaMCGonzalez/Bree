@@ -1,7 +1,7 @@
 
-@css{
+
 	h1{
-		@apply text-3xl font-bold text-gray-800;
+		@apply text-3xl font-bold text-gray-800 ;
 	} 
 	
 	h2{
@@ -15,22 +15,24 @@
 	h4 {
 		@apply text-lg font-medium leading-6 text-gray-800;
 	}
-	.p-gray{
-		@apply text-md font-medium text-gray-500
-	}
-
-	.p-gray-b{
-		@apply text-md font-bold text-gray-500;
-	}
 	
-	.p-black{
-		@apply text-md font-medium text-gray-900;
-	}
 	
-	.p-black-b{
-		@apply text-md font-bold text-gray-900;
-	}
+	p{
+		@apply text-xs font-medium text-gray-500 ;
+		
+		b{
+			@apply text-xs font-bold text-gray-500;
+		}
 
-}
+		black{
+			@apply text-xs font-medium text-gray-900;
+		}
+		black-b{
+				@apply text-xs font-bold text-gray-900;
+			}
+
+		
+
+	}
 
 
