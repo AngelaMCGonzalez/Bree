@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_04_052349) do
+ActiveRecord::Schema.define(version: 2021_10_27_045805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,12 +43,18 @@ ActiveRecord::Schema.define(version: 2021_10_04_052349) do
     t.decimal "satured_fatty_acids", default: "0.0"
     t.decimal "monounsaturated_fatty_acids", default: "0.0"
     t.decimal "polyunsaturated_fatty_acids", default: "0.0"
-    t.string "potassium"
-    t.string "phosphorus"
+    t.string "potassium", default: ""
+    t.string "phosphorus", default: ""
     t.string "ascorbic_acid", default: ""
   end
 
-  create_table "data_migrations", primary_key: "version", id: :string, force: :cascade do |t|
+  create_table "anthropometric_measurements", force: :cascade do |t|
+    t.float "size"
+    t.float "weight"
+    t.float "bmi"
+    t.float "usual_weight"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "group_portion_times", force: :cascade do |t|
@@ -112,12 +118,23 @@ ActiveRecord::Schema.define(version: 2021_10_04_052349) do
 
   create_table "macronutrients", force: :cascade do |t|
     t.bigint "plan_id", null: false
-    t.jsonb "carbohydrates", default: {"percentage"=>50}, null: false
-    t.jsonb "protein", default: {"percentage"=>25}, null: false
-    t.jsonb "lipids", default: {"percentage"=>25}, null: false
+    t.jsonb "carbohydrates", default: {"grams"=>287.5, "percentage"=>50}, null: false
+    t.jsonb "protein", default: {"grams"=>143.75, "percentage"=>25}, null: false
+    t.jsonb "lipids", default: {"grams"=>63.89, "percentage"=>25}, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["plan_id"], name: "index_macronutrients_on_plan_id"
+  end
+
+  create_table "medical_histories", force: :cascade do |t|
+    t.string "diseases", default: [], array: true
+    t.text "medicines"
+    t.boolean "surgeries"
+    t.string "gastrointestinal_disorders", default: [], array: true
+    t.bigint "patient_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["patient_id"], name: "index_medical_histories_on_patient_id"
   end
 
   create_table "patients", force: :cascade do |t|
@@ -132,6 +149,12 @@ ActiveRecord::Schema.define(version: 2021_10_04_052349) do
     t.float "height"
     t.string "gender"
     t.float "physical_activity_factor"
+    t.string "last_name"
+    t.string "mothers_last_name"
+    t.string "phone"
+    t.date "birth_date"
+    t.string "occupation"
+    t.string "objectives", default: [], array: true
     t.index ["user_id"], name: "index_patients_on_user_id"
   end
 
@@ -182,6 +205,7 @@ ActiveRecord::Schema.define(version: 2021_10_04_052349) do
   add_foreign_key "group_portion_times", "plans"
   add_foreign_key "group_portions", "plans"
   add_foreign_key "macronutrients", "plans"
+  add_foreign_key "medical_histories", "patients"
   add_foreign_key "patients", "users"
   add_foreign_key "plans", "patients"
 end

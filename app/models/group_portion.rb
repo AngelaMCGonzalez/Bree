@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: group_portions
@@ -54,5 +56,4 @@ class GroupPortion < ApplicationRecord
   serialize :sugars_s_g, JsonbSerializer
   serialize :vegetables, JsonbSerializer
   serialize :whole_milk, JsonbSerializer
-  
 end

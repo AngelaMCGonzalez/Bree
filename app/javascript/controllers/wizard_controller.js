@@ -1,98 +1,97 @@
-import { Controller } from 'stimulus'
+import { Controller } from 'stimulus';
 
 let step = 0;
 
 export default class extends Controller {
-  
-  static targets = [ 'previous', 'step' ]
+  static targets = ['previous', 'step']
 
-  connect(){
+  connect() {
     step = 1;
     this.validateButtonsVisibility();
   }
 
-  goTo(e){
+  goTo(e) {
     e.preventDefault();
     // const stepId = e.currentTarget.dataset.stepId;
     // const stepUrl = e.currentTarget.dataset.stepUrl;
     // const span = e.currentTarget.querySelector('#step-number');
-    
+
     // step = parseInt(span.innerHTML)
-    
+
     // this.refreshTurboFrame(stepId, stepUrl);
     // this.paintActiveStep(e.currentTarget)
     // this.validateButtonsVisibility()
   }
 
-  next(e){
-    if(step === 2){
-      this.launchMacroValidator()
+  next(e) {
+    if (step === 2) {
+      this.launchMacroValidator();
     } else {
-      this.launchNext()
+      this.launchNext();
     }
   }
 
-  launchNext(){
-    step += 1
-    this.findStep()
+  launchNext() {
+    step += 1;
+    this.findStep();
   }
 
-  previous(e){
-    step-= 1
-    this.findStep()
+  previous(e) {
+    step -= 1;
+    this.findStep();
   }
 
-  findStep(){
-    if(step > 5){
-      step = 5
+  findStep() {
+    if (step > 5) {
+      step = 5;
     }
-    if(step > 0 && step <= 5){
-      const target = document.getElementById(`step-link-${step}`)
-      const stepId = target.dataset.stepId;
-      const stepUrl = target.dataset.stepUrl;
+    if (step > 0 && step <= 5) {
+      const target = document.getElementById(`step-link-${step}`);
+      const { stepId } = target.dataset;
+      const { stepUrl } = target.dataset;
       this.refreshTurboFrame(stepId, stepUrl);
       this.paintActiveStep(target);
     }
   }
 
-  paintActiveStep(target){
+  paintActiveStep(target) {
     this.validateButtonsVisibility();
     this.stepTargets.forEach((el, i) => {
-      el.classList.replace('bg-indigo-500','bg-white')
-      el.classList.replace('hover:bg-indigo-600', 'hover:bg-indigo-50')
+      el.classList.replace('bg-indigo-500', 'bg-white');
+      el.classList.replace('hover:bg-indigo-600', 'hover:bg-indigo-50');
       const span = el.querySelector('#step-number');
-      span.classList.replace('text-white','text-indigo-500')
+      span.classList.replace('text-white', 'text-indigo-500');
 
-      if(target === el){
-        el.classList.replace('bg-white', 'bg-indigo-500')
-        el.classList.replace('hover:bg-indigo-50', 'hover:bg-indigo-600')
-        span.classList.replace('text-indigo-500', 'text-white')
-        
-        step = parseInt(span.innerHTML)
+      if (target === el) {
+        el.classList.replace('bg-white', 'bg-indigo-500');
+        el.classList.replace('hover:bg-indigo-50', 'hover:bg-indigo-600');
+        span.classList.replace('text-indigo-500', 'text-white');
+
+        step = parseInt(span.innerHTML);
       }
-    })
+    });
   }
 
-  validateButtonsVisibility(){
-    if(step === 1){
-      this.previousTarget.style.display = 'none'
+  validateButtonsVisibility() {
+    if (step === 1) {
+      this.previousTarget.style.display = 'none';
     } else {
-      this.previousTarget.style.display = 'block'
+      this.previousTarget.style.display = 'block';
     }
   }
 
-  refreshTurboFrame(id, url){
+  refreshTurboFrame(id, url) {
     window.dispatchEvent(new CustomEvent('refreshTurboFrame', {
       detail: {
         url,
-        id
+        id,
       },
-    }));   
+    }));
   }
 
-  launchMacroValidator(){
+  launchMacroValidator() {
     window.dispatchEvent(new CustomEvent('macronutrimentsValidator', {
-        detail: step
-    })); 
+      detail: step,
+    }));
   }
 }

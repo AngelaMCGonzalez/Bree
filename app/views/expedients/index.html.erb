@@ -1,0 +1,240 @@
+<!-- This example requires Tailwind CSS v2.0+ Comienza slide over-->
+<div x-data="{open: true}" class="fixed inset-0 overflow-hidden" aria-labelledby="slide-over-title" role="dialog"
+    aria-modal="true">
+    <div class="absolute inset-0 overflow-hidden">
+        <!--
+         Background overlay, show/hide based on slide-over state.
+  
+        Entering: "ease-in-out duration-500"
+          From: "opacity-0"
+          To: "opacity-100"
+        Leaving: "ease-in-out duration-500"
+          From: "opacity-100"
+          To: "opacity-0"
+      -->
+        <div class="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"
+            @click="open = false; setTimeout(() => open = true, 1000);"></div>
+        <div x-show="open" class="fixed inset-y-0 right-0 pl-10 max-w-full flex"
+            x-transition:enter="transform transition ease-in-out duration-500"
+            x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0"
+            x-transition:leave="transform transition ease-in-out duration-500" x-transition:leave-start="translate-x-0"
+            x-transition:leave-end="translate-x-full">
+            <!--
+          Slide-over panel, show/hide based on slide-over state.
+  
+          Entering: "transform transition ease-in-out duration-500 sm:duration-700"
+            From: "translate-x-full"
+            To: "translate-x-0"
+          Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
+            From: "translate-x-0"
+            To: "translate-x-full"
+        -->
+            <div class="relative w-screen max-w-3xl">
+                <!--
+            Close button, show/hide based on slide-over state.
+  
+            Entering: "ease-in-out duration-500"
+              From: "opacity-0"
+              To: "opacity-100"
+            Leaving: "ease-in-out duration-500"
+              From: "opacity-100"
+              To: "opacity-0"
+          -->
+                <div class="absolute top-0 left-0 -ml-8 pt-4 pr-2 flex sm:-ml-10 sm:pr-4">
+                    <button @click="open = false; setTimeout(() => open = true, 1000);" aria-label="Close panel"
+                        class="rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white">
+                        <!-- Heroicon name: outline/x -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="h-full flex flex-col bg-white shadow-xl overflow-y-scroll">
+                    <div class="px-4 sm:px-6 mt-4">
+                        <h2 class="text-xl font-semibold text-gray-900" id="slide-over-title">
+                            Expediente
+                        </h2>
+                        <div class="mt-5">
+                            <div class="sm:hidden">
+                                <label for="tabs" class="sr-only">Select a tab</label>
+                                <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
+                                <select id="tabs" name="tabs"
+                                    class="block w-full focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md "
+                                    onchange="javascript:location.href = this.value;">
+                                    <option>
+                                        Generales</option>
+
+                                    <option>Historial</option>
+
+                                    <option>Hábitos</option>
+
+                                    <option>Actividad física</option>
+
+                                    <option selected>Notas</option>
+                                </select>
+                            </div>
+                            <div class="hidden sm:block">
+                                <nav data-controller="calories-tabs" class="flex space-x-4" aria-label="Tabs">
+                                    <!-- Current: "bg-indigo-100 text-indigo-700", Default: "text-gray-500 hover:text-gray-700" -->
+                                    <a class="bg-indigo-50 text-indigo-700 px-3 py-2 font-medium text-sm rounded-md"
+                                        aria-current="page" data-controller="operation-tabs"
+                                        data-operation-tabs-url-value="http://localhost:3000/expedients/general"
+                                        data-operation-tabs-id-value="harris-operations"
+                                        data-action="click->operation-tabs#changeTab click->calories-tabs#selectTab"
+                                        data-calories-tabs-target="option">
+                                        Generales
+                                    </a>
+
+                                    <a class="bg-indigo-50 text-indigo-700 px-3 py-2 font-medium text-sm rounded-md"
+                                        aria-current="page" data-controller="operation-tabs"
+                                        data-operation-tabs-url-value="http://localhost:3000/expedients/history"
+                                        data-operation-tabs-id-value="harris-operations"
+                                        data-action="click->operation-tabs#changeTab click->calories-tabs#selectTab"
+                                        data-calories-tabs-target="option">
+                                        Historial
+                                    </a>
+
+                                    <a class="bg-indigo-50 text-indigo-700 px-3 py-2 font-medium text-sm rounded-md"
+                                        aria-current="page" data-controller="operation-tabs"
+                                        data-operation-tabs-url-value="http://localhost:3000/expedients/habits"
+                                        data-operation-tabs-id-value="harris-operations"
+                                        data-action="click->operation-tabs#changeTab click->calories-tabs#selectTab"
+                                        data-calories-tabs-target="option">
+                                        Hábitos
+                                    </a>
+
+                                    <a class="bg-indigo-50 text-indigo-700 px-3 py-2 font-medium text-sm rounded-md"
+                                        aria-current="page" data-controller="operation-tabs"
+                                        data-operation-tabs-url-value="http://localhost:3000/expedients/physical_activity"
+                                        data-operation-tabs-id-value="harris-operations"
+                                        data-action="click->operation-tabs#changeTab click->calories-tabs#selectTab"
+                                        data-calories-tabs-target="option">
+                                        Actividad física
+                                    </a>
+
+                                    <a class="bg-indigo-50 text-indigo-700 px-3 py-2 font-medium text-sm rounded-md"
+                                        aria-current="page" data-controller="operation-tabs"
+                                        data-operation-tabs-url-value="http://localhost:3000/expedients/notes"
+                                        data-operation-tabs-id-value="harris-operations"
+                                        data-action="click->operation-tabs#changeTab click->calories-tabs#selectTab"
+                                        data-calories-tabs-target="option">
+                                        Notas
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="border-t border-gray-200">
+                        <turbo-frame data-controller="operation-tabs-shower"
+                            data-operation-tabs-shower-target="turboFrame"
+                            data-action="refreshOperationTurboFrame@window->operation-tabs-shower#updateTurboFrame"
+                            id="harris-operations">
+                            Reemplazar por el codigo
+                        </turbo-frame>
+</div>
+
+
+
+<script>
+    function select(config) {
+        return {
+            data: config.data,
+
+            emptyOptionsMessage: config.emptyOptionsMessage ?? 'No results match your search.',
+
+            focusedOptionIndex: null,
+
+            name: config.name,
+
+            open: false,
+
+            options: {},
+
+            placeholder: config.placeholder ?? 'Select an option',
+
+            search: '',
+
+            value: config.value,
+
+            closeListbox: function () {
+                this.open = false
+
+                this.focusedOptionIndex = null
+
+                this.search = ''
+            },
+
+            focusNextOption: function () {
+                if (this.focusedOptionIndex === null) return this.focusedOptionIndex = Object.keys(this.options).length - 1
+
+                if (this.focusedOptionIndex + 1 >= Object.keys(this.options).length) return
+
+                this.focusedOptionIndex++
+
+                this.$refs.listbox.children[this.focusedOptionIndex].scrollIntoView({
+                    block: "center",
+                })
+            },
+
+            focusPreviousOption: function () {
+                if (this.focusedOptionIndex === null) return this.focusedOptionIndex = 0
+
+                if (this.focusedOptionIndex <= 0) return
+
+                this.focusedOptionIndex--
+
+                this.$refs.listbox.children[this.focusedOptionIndex].scrollIntoView({
+                    block: "center",
+                })
+            },
+
+            init: function () {
+                this.options = this.data
+
+                if (!(this.value in this.options)) this.value = null
+
+                this.$watch('search', ((value) => {
+                    if (!this.open || !value) return this.options = this.data
+
+                    this.options = Object.keys(this.data)
+                        .filter((key) => this.data[key].toLowerCase().includes(value.toLowerCase()))
+                        .reduce((options, key) => {
+                            options[key] = this.data[key]
+                            return options
+                        }, {})
+                }))
+            },
+
+            selectOption: function () {
+                if (!this.open) return this.toggleListboxVisibility()
+
+                this.value = Object.keys(this.options)[this.focusedOptionIndex]
+
+                this.closeListbox()
+            },
+
+            toggleListboxVisibility: function () {
+                if (this.open) return this.closeListbox()
+
+                this.focusedOptionIndex = Object.keys(this.options).indexOf(this.value)
+
+                if (this.focusedOptionIndex < 0) this.focusedOptionIndex = 0
+
+                this.open = true
+
+                this.$nextTick(() => {
+                    this.$refs.search.focus()
+
+                    this.$refs.listbox.children[this.focusedOptionIndex].scrollIntoView({
+                        block: "center"
+                    })
+                })
+            },
+        }
+    }
+</script>
