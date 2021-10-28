@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class JsonbSerializer
   def self.dump(hash)
     hash

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddFiberAndFolicAcidToAliments < ActiveRecord::Migration[6.1]
   def change
     add_column :aliments, :fiber, :decimal, null: true, default: 0.0

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateAliments < ActiveRecord::Migration[6.1]
   def change
     create_table :aliments do |t|
