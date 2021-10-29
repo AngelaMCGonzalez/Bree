@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'csv'
 
 class AddGrasaSPAliments < ActiveRecord::Migration[6.1]
@@ -7,10 +8,10 @@ class AddGrasaSPAliments < ActiveRecord::Migration[6.1]
     csv = CSV.parse(file, headers: false)
     csv.each do |row|
       Aliment.create!(
-        group_name: row[0], 
-        name: row[1], 
+        group_name: row[0],
+        name: row[1],
         suggested_amount: row[2],
-        unit: row[3], 
+        unit: row[3],
         gross_weight: row[4],
         net_weight: row[5],
         energy: row[6],
@@ -21,9 +22,9 @@ class AddGrasaSPAliments < ActiveRecord::Migration[6.1]
         monounsaturated_fatty_acids: row[11],
         polyunsaturated_fatty_acids: row[12],
         cholesterol: row[13],
-        sodium: row[14],
+        sodium: row[14]
       )
-    end    
+    end
   end
 
   def down

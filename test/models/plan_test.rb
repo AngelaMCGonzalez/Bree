@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: plans
@@ -16,7 +18,7 @@
 #
 #  fk_rails_...  (patient_id => patients.id)
 #
-require "test_helper"
+require 'test_helper'
 
 class PlanTest < ActiveSupport::TestCase
   # test "the truth" do

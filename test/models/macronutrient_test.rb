@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: macronutrients
@@ -18,7 +20,7 @@
 #
 #  fk_rails_...  (plan_id => plans.id)
 #
-require "test_helper"
+require 'test_helper'
 
 class MacronutrientTest < ActiveSupport::TestCase
   # test "the truth" do
