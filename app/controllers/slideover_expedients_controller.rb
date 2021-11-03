@@ -11,4 +11,8 @@ class SlideoverExpedientsController < ApplicationController
   end
   def anthropometric
   end
+  def modal
+  end
+  def modal_empty
+  end
 end
