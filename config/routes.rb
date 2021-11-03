@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   get 'slideover_expedients/anthropometric'
   get 'slideover_expedients/physical_activity'
   get 'slideover_expedients/notes'
-  get 'slideover_expedients/modal'
-  get 'slideover_expedients/modal_empty'
   resources :invitations
   resources :aliments
   resources :aliment_groups
