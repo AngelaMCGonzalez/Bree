@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'csv'
 
 class AddCerealWithGreaseAliments < ActiveRecord::Migration[6.1]
@@ -7,10 +8,10 @@ class AddCerealWithGreaseAliments < ActiveRecord::Migration[6.1]
     csv = CSV.parse(file, headers: false)
     csv.each do |row|
       Aliment.create!(
-        group_name: row[0], 
-        name: row[1], 
+        group_name: row[0],
+        name: row[1],
         suggested_amount: row[2],
-        unit: row[3], 
+        unit: row[3],
         gross_weight: row[4],
         net_weight: row[5],
         energy: row[6],
@@ -24,7 +25,7 @@ class AddCerealWithGreaseAliments < ActiveRecord::Migration[6.1]
         sodium: row[14],
         sugars_per_equivalent: row[15],
         glycemic_index: row[16],
-        glycemic_load: row[17],
+        glycemic_load: row[17]
       )
     end
   end

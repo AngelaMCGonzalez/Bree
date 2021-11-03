@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: body_circumferences
+#
+#  id          :bigint           not null, primary key
+#  calf        :float
+#  flexed_arm  :float
+#  hip         :float
+#  relaxed_arm :float
+#  waist       :float
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+one:
+  waist: 1.5
+  hip: 1.5
+  relaxed_arm: 1.5
+  flexed_arm: 1.5
+  calf: 1.5
+
+two:
+  waist: 1.5
+  hip: 1.5
+  relaxed_arm: 1.5
+  flexed_arm: 1.5
+  calf: 1.5

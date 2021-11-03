@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: obstetrical_gynecological_informations
+#
+#  id                :bigint           not null, primary key
+#  contraceptives    :string
+#  lactation         :boolean
+#  last_menstruation :date
+#  pregnancy         :boolean
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#
+
+one:
+  last_menstruation: 2021-10-29
+  contraceptives: MyString
+  pregnancy: false
+  lactation: false
+
+two:
+  last_menstruation: 2021-10-29
+  contraceptives: MyString
+  pregnancy: false
+  lactation: false

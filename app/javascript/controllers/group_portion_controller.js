@@ -11,7 +11,7 @@ export default class extends Controller {
     proteinSaved: Number,
     lipidsSaved: Number,
     energySaved: Number,
-    key: String
+    key: String,
   }
 
   static targets = [
@@ -23,28 +23,29 @@ export default class extends Controller {
   ]
 
   connect() {
-    this.setGroupValues({ 
-      carbohydrates: this.carbohydratesSavedValue, 
-      protein: this.proteinSavedValue, 
-      lipids: this.lipidsSavedValue, 
-      energy: this.energySavedValue
+    this.setGroupValues({
+      carbohydrates: this.carbohydratesSavedValue,
+      protein: this.proteinSavedValue,
+      lipids: this.lipidsSavedValue,
+      energy: this.energySavedValue,
     });
-    this.quantityTarget.addEventListener("change", (e) => this.multiply_groups(parseFloat(e.target.value)))
+    this.quantityTarget.addEventListener('change', (e) => this.multiply_groups(parseFloat(e.target.value)));
   }
 
-  setGroupValues(values = {carbohydrates: 0, protein: 0, lipids: 0, energy: 0}) {
+  setGroupValues(values = {
+    carbohydrates: 0, protein: 0, lipids: 0, energy: 0,
+  }) {
     this.carbohydratesTarget.innerHTML = `${values.carbohydrates} grs`;
     this.proteinTarget.innerHTML = `${values.protein} grs`;
     this.lipidsTarget.innerHTML = `${values.lipids} grs`;
     this.energyTarget.innerHTML = `${values.energy} kcal`;
 
-    this.launchGroupValuesEvent()
+    this.launchGroupValuesEvent();
   }
 
   multiply_groups(multiple, locale = false) {
-    
-    if(isNaN(multiple)){
-      multiple = 0
+    if (isNaN(multiple)) {
+      multiple = 0;
     }
 
     const groupValues = {
@@ -53,34 +54,34 @@ export default class extends Controller {
       protein: parseFloat(this.proteinValue) * multiple,
       lipids: parseFloat(this.lipidsValue) * multiple,
       energy: parseFloat(this.energyValue) * multiple,
-    }
+    };
 
-    const groupTimeValues = { }
+    const groupTimeValues = { };
 
-    this.setGroupValues(groupValues)
+    this.setGroupValues(groupValues);
 
-    delete groupValues['key']
-    groupValues['carbohydratesValue'] = groupValues.carbohydrates
-    groupValues['proteinValue'] = groupValues.protein
-    groupValues['lipidsValue'] = groupValues.lipids
-    groupValues['energyValue'] = groupValues.energy
-    groupValues['carbohydrates'] = this.carbohydratesValue
-    groupValues['protein'] = this.proteinValue
-    groupValues['lipids'] = this.lipidsValue
-    groupValues['energy'] = this.energyValue
-    groupValues['quantity'] = multiple
-    groupTimeValues['quantity'] = multiple
+    delete groupValues.key;
+    groupValues.carbohydratesValue = groupValues.carbohydrates;
+    groupValues.proteinValue = groupValues.protein;
+    groupValues.lipidsValue = groupValues.lipids;
+    groupValues.energyValue = groupValues.energy;
+    groupValues.carbohydrates = this.carbohydratesValue;
+    groupValues.protein = this.proteinValue;
+    groupValues.lipids = this.lipidsValue;
+    groupValues.energy = this.energyValue;
+    groupValues.quantity = multiple;
+    groupTimeValues.quantity = multiple;
 
-    if(!locale){
-      this.updateGroupPortion(groupValues, groupTimeValues)
+    if (!locale) {
+      this.updateGroupPortion(groupValues, groupTimeValues);
     }
   }
 
-  updateGroupPortion(groupValues, groupTimeValues){
-    const groupPortion = { }
-    const groupPortionTime = { }
-    groupPortion[`${this.keyValue}`] = groupValues
-    groupPortionTime[`${this.keyValue}`] = groupTimeValues
+  updateGroupPortion(groupValues, groupTimeValues) {
+    const groupPortion = { };
+    const groupPortionTime = { };
+    groupPortion[`${this.keyValue}`] = groupValues;
+    groupPortionTime[`${this.keyValue}`] = groupTimeValues;
 
     fetch(this.urlValue, {
       method: 'PUT',
@@ -90,12 +91,12 @@ export default class extends Controller {
       },
       body: JSON.stringify({
         group_portion: groupPortion,
-        group_portion_time: groupPortionTime
-      })
+        group_portion_time: groupPortionTime,
+      }),
     });
   }
 
-  launchGroupValuesEvent(){
+  launchGroupValuesEvent() {
     window.dispatchEvent(new CustomEvent('groupPortions'));
   }
 

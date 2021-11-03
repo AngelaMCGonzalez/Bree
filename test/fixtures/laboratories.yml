@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: laboratories
+#
+#  id                 :bigint           not null, primary key
+#  analysis_date      :date
+#  analysis_type      :string
+#  file_name          :string
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  medical_history_id :bigint           not null
+#
+# Indexes
+#
+#  index_laboratories_on_medical_history_id  (medical_history_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (medical_history_id => medical_histories.id)
+#
+
+one:
+  analysis_type: MyString
+  analysis_date: 2021-10-29
+  file: MyString
+  medical_history: one
+
+two:
+  analysis_type: MyString
+  analysis_date: 2021-10-29
+  file: MyString
+  medical_history: two

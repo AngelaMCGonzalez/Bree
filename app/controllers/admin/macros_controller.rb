@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Admin
   class MacrosController < BaseController
     def edit
@@ -13,7 +15,8 @@ module Admin
     private
 
     def macro_params
-      params.require(:macronutrient).permit(carbohydrates: [:percentage, :grams], lipids: [:percentage, :grams], protein: [:percentage, :grams])
+      params.require(:macronutrient).permit(carbohydrates: %i[percentage grams], lipids: %i[percentage grams],
+                                            protein: %i[percentage grams])
     end
   end
 end

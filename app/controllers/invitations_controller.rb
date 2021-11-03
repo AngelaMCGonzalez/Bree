@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class InvitationsController < ApplicationController
-  before_action :set_invitation, only: %i[ show edit update destroy ]
+  before_action :set_invitation, only: %i[show edit update destroy]
 
   def index
     @invitations = Invitation.all
@@ -36,11 +38,12 @@ class InvitationsController < ApplicationController
   end
 
   private
-    def set_invitation
-      @invitation = Invitation.find(params[:id])
-    end
 
-    def invitation_params
-      params.require(:invitation).permit(:name, :email, :city, :nutrition_professional)
-    end
+  def set_invitation
+    @invitation = Invitation.find(params[:id])
+  end
+
+  def invitation_params
+    params.require(:invitation).permit(:name, :email, :city, :nutrition_professional)
+  end
 end

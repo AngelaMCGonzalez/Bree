@@ -1,0 +1,64 @@
+<turbo-frame id="patient-recipe-times">
+  <div class="bg-gray-100 divide-x-2 divide-gray-300 px-2 flex overflow-x-auto sticky top-12 py-2 mt-0 px-16 z-10"> <!-- Group allocation -->
+    <% @patient.plan.group_portion_time.attributes.except('id', 'plan_id' , 'created_at' , 'updated_at' ).each do
+      |attribute, value| %>
+      <% if value[:quantity] > 0 && value[@time.to_sym] > 0 %>
+        <div class="ml-3 flex-shrink-0">
+          <label class="text-gray-500 font-semibold text-xs ml-3">
+            <%= t(attribute) %>
+            <span class="bg-white text-gray-500 hidden ml-2 py-0.5 px-1.5 border border-gray-300 rounded-full text-xs font-semibold md:inline-block">
+              <%= value[@time.to_sym] %>
+            </span>
+          </label>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <!-- Gallery -->
+  <section class="mt-6 pb-44 sm:px-16" aria-labelledby="gallery-heading">
+    <h2 id="gallery-heading" class="sr-only">Recently viewed</h2>
+    <ul role="list" class="grid grid-cols-1 gap-x-4 gap-y-5 sm:grid-cols-1 sm:gap-x-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+    <% @recipes.each do |recipe| %>
+      <li 
+        id="recipe-<%= recipe.id %>"
+        class="relative" 
+        data-controller='recipe recipe-selectable'
+        data-recipe-name-value="<%= recipe.name %>"
+        data-recipe-image-value="<%= recipe.image %>"
+        data-recipe-ingredients-value="<%= recipe.ingredients %>"
+        data-recipe-accompaniment-value="<%= recipe.accompaniment %>"
+        data-recipe-preparation-value="<%= recipe.steps %>"
+        data-recipe-preparation-time-value="<%= recipe.preparation_time %>"
+        data-recipe-cooking-time-value="<%= recipe.cooking_time %>"
+        data-action="click->recipe#showResume click->recipe-selectable#select"
+      >
+        <!-- Current: "ring-2 ring-offset-2 ring-indigo-500", Default: "focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500" -->
+        <!-- -->
+        <div 
+          id="recipe-<%= recipe.id %>-target"
+          data-recipe-selectable-target="recipe"
+          class="group block w-full h-32 object object-cover rounded-lg bg-gray-100 overflow-hidden"
+        >
+          <!-- Current: "", Default: "group-hover:opacity-75" -->
+          <%= image_tag(recipe.image, class: 'object-cover cursor-pointer group-hover:opacity-75') %>
+          <button type="button" class="absolute inset-0 focus:outline-none">
+            <span class="sr-only">View recipe details</span>
+          </button>
+        </div>
+        <p class="mt-2 block text-sm font-medium text-gray-800 truncate pointer-events-none">
+          <%= recipe.name %>
+        </p>
+        <a href="#">
+          <span class="inline-flex items-center mt-1 px-1.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Seleccionar
+          </span>
+        </a>
+      </li>
+      <% end  %>
+    </ul>
+  </section>
+</turbo-frame>
