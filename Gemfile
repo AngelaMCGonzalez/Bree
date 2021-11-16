@@ -28,7 +28,7 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'pry-byebug'
   gem 'pry-rails'
-  gem 'rack-mini-profiler', '~> 2.0'
+  gem 'rack-mini-profiler', '~> 2.3'
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
 end
