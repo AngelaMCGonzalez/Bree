@@ -1,4 +1,4 @@
-.label-sm{
+label{
 	@apply
 		font-medium 
 		text-sm 
@@ -6,7 +6,7 @@
 	;
 }
 
-.label-md{
+.medium{
 	@apply
 		font-medium 
 		text-md 
@@ -14,7 +14,7 @@
 	;
 }
 
-.label-wakeup-time{
+.wakeup-time{
 	@apply
 		sr-only
 	;
