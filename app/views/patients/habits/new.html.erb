@@ -417,6 +417,8 @@
                     </div>
                 </div> <!-- fin card habitos-->
 
+                
+
                 <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6 mt-6">
                     <!-- Inicia card dieta habitual -->
                     <div class="md:grid md:grid-cols-3 md:gap-6">
@@ -428,84 +430,44 @@
                             <div class="mt-5 md:mt-5 md:col-span-3">
 
                                 <div>
-                                    <label for="breakfast" class="text-sm">Desayuno</label>
+                                    <h4>Desayuno</h4>
                                     <div class="flex flex-col mt-3">
                                         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                                             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                                                <div
-                                                    class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                                                    <table class="min-w-full  divide-y divide-gray-200 table-fixed">
-                                                        <thead class="bg-gray-50">
-                                                            <tr>
-                                                                <th scope="col"
-                                                                    class="w-1/6 px-6 py-3 text-left text-xs medium uppercase tracking-wider">
-                                                                    Horario
-                                                                </th>
-                                                                <th scope="col"
-                                                                    class="w-1/6 px-6 py-3 text-left text-xs medium uppercase tracking-wider">
-                                                                    Lugar
-                                                                </th>
-                                                                <th scope="col"
-                                                                    class="w-1/6 px-6 py-3 text-left text-xs medium uppercase tracking-wider">
-                                                                    Tipo
-                                                                </th>
-                                                                <th scope="col"
-                                                                    class="w-3/6 px-6 py-3 text-left text-xs medium uppercase tracking-wider">
-                                                                    Descripción
-                                                                </th>
-
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody class="bg-white divide-y divide-gray-200">
-                                                            <tr>
-                                                                <td
-                                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                                                    <input type="time" name="motive" id="motive"
-                                                                        autocomplete="motive"
-                                                                        class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-white rounded-md">
-                                                                </td>
-                                                                <td
-                                                                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                                    <div>
-                                                                        <div class="max-w-screen-2xl mt-1">
-                                                                            <div>
-                                                                                <select id="place" name="place" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                                                                                    <option>Casa</option>
-                                                                                    <option>Trabajo</option>
-                                                                                    <option>Establecimiento</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <!--Fin select-->
-                                                                </td>
-                                                                <td
-                                                                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                                            <div>
-                                                                                <div class="max-w-screen-2xl mt-1">
-                                                                                    <div>
-                                                                                        <select id="type" name="type" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                                                                                            <option>Preparado</option>
-                                                                                            <option>Comprada</option>
-                                                                                            <option>Comedor</option>
-                                                                                        </select>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <!--Fin select-->
-                                                                </td>
-                                                                <td
-                                                                    class="px-6 py-4 whitespace-normal text-sm text-gray-500">
-                                                                    <input type="text" name="motive" id="motive"
-                                                                        autocomplete="motive"
-                                                                        class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-white rounded-md">
-                                                                </td>
-
-                                                            </tr>
-
-                                                            <!-- More people... -->
-                                                        </tbody>
-                                                    </table>
+																						<div class="grid grid-cols-9 gap-6">
+																							<div class="col-span-6 sm:col-span-3">
+																											<label for="time" class="text-sm">Horario</label>
+																											<input type="number" step="any" name="time" id="time"
+																													autocomplete="time"
+																													class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
+																									</div>
+																									<div class="col-span-6 sm:col-span-3">
+																											<label for="time" class="text-sm">Lugar</label>
+																											<div>
+                                                            <select id="place" name="place" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                                                <option>Casa</option>
+                                                                <option>Trabajo</option>
+                                                                <option>Establecimiento</option>
+                                                             </select>
+                                                      </div>
+																									</div>
+																									<div class="col-span-6 sm:col-span-3">
+																											<label for="time" class="text-sm">Tipo</label>
+																											<div>
+                                                            <select id="type" name="type" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                                               <option>Preparado</option>
+                                                               <option>Comprada</option>
+                                                               <option>Comedor</option>
+                                                             </select>
+                                                        </div>
+																									</div>
+																							</div>
+																										<div class="col-span-6 sm:col-span-3 mt-4">
+																											<label for="description" class="text-sm ">Descripción</label>
+																											<input type="text" step="any" name="description" id="description"
+																													autocomplete="description"
+																													class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
+																									</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -513,84 +475,44 @@
                                 </div>
 
                                 <div class="mt-4">
-                                    <label for="breakfast" class="text-sm">Colación</label>
-                                    <div class="flex flex-col mt-3">
+                                    <h4>Primera colación</h4>
+                                     <div class="flex flex-col mt-3">
                                         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                                             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                                                <div
-                                                    class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                                                    <table class="min-w-full  divide-y divide-gray-200 table-fixed">
-                                                        <thead class="bg-gray-50">
-                                                            <tr>
-                                                                <th scope="col"
-                                                                    class="w-1/6 px-6 py-3 text-left text-xs medium uppercase tracking-wider">
-                                                                    Horario
-                                                                </th>
-                                                                <th scope="col"
-                                                                    class="w-1/6 px-6 py-3 text-left text-xs medium uppercase tracking-wider">
-                                                                    Lugar
-                                                                </th>
-                                                                <th scope="col"
-                                                                    class="w-1/6 px-6 py-3 text-left text-xs medium uppercase tracking-wider">
-                                                                    Tipo
-                                                                </th>
-                                                                <th scope="col"
-                                                                    class="w-3/6 px-6 py-3 text-left text-xs medium uppercase tracking-wider">
-                                                                    Descripción
-                                                                </th>
-
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody class="bg-white divide-y divide-gray-200">
-                                                            <tr>
-                                                                <td
-                                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                                                    <input type="time" name="motive" id="motive"
-                                                                        autocomplete="motive"
-                                                                        class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-white rounded-md">
-                                                                </td>
-                                                                <td
-                                                                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                                    <div>
-                                                                        <div class="max-w-screen-2xl mt-1">
-                                                                            <div>
-                                                                                <select id="place1" name="place1" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                                                                                    <option>Casa</option>
-                                                                                    <option>Trabajo</option>
-                                                                                    <option>Establecimiento</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <!--Fin select-->
-                                                                </td>
-                                                                <td
-                                                                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                                            <div>
-                                                                                <div class="max-w-screen-2xl mt-1">
-                                                                                    <div>
-                                                                                        <select id="type1" name="type1" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                                                                                            <option>Preparado</option>
-                                                                                            <option>Comprada</option>
-                                                                                            <option>Comedor</option>
-                                                                                        </select>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <!--Fin select-->
-                                                                </td>
-                                                                <td
-                                                                    class="px-6 py-4 whitespace-normal text-sm text-gray-500">
-                                                                    <input type="text" name="motive" id="motive"
-                                                                        autocomplete="motive"
-                                                                        class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-white rounded-md">
-                                                                </td>
-
-                                                            </tr>
-
-                                                            <!-- More people... -->
-                                                        </tbody>
-                                                    </table>
+																						<div class="grid grid-cols-9 gap-6">
+																							<div class="col-span-6 sm:col-span-3">
+																											<label for="time" class="text-sm">Horario</label>
+																											<input type="number" step="any" name="time" id="time"
+																													autocomplete="time"
+																													class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
+																									</div>
+																									<div class="col-span-6 sm:col-span-3">
+																											<label for="time" class="text-sm">Lugar</label>
+																											<div>
+                                                            <select id="place" name="place" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                                                <option>Casa</option>
+                                                                <option>Trabajo</option>
+                                                                <option>Establecimiento</option>
+                                                             </select>
+                                                      </div>
+																									</div>
+																									<div class="col-span-6 sm:col-span-3">
+																											<label for="time" class="text-sm">Tipo</label>
+																											<div>
+                                                            <select id="type" name="type" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                                               <option>Preparado</option>
+                                                               <option>Comprada</option>
+                                                               <option>Comedor</option>
+                                                             </select>
+                                                        </div>
+																									</div>
+																							</div>
+																										<div class="col-span-6 sm:col-span-3 mt-4">
+																											<label for="description" class="text-sm">Descripción</label>
+																											<input type="text" step="any" name="description" id="description"
+																													autocomplete="description"
+																													class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
+																									</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -598,18 +520,149 @@
                                 </div>
 
                             </div>
+
+														<div class="mt-4">
+                                    <h4>Comida</h4>
+                                     <div class="flex flex-col mt-3">
+                                        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+																						<div class="grid grid-cols-9 gap-6">
+																							<div class="col-span-6 sm:col-span-3">
+																											<label for="time" class="text-sm">Horario</label>
+																											<input type="number" step="any" name="time" id="time"
+																													autocomplete="time"
+																													class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
+																									</div>
+																									<div class="col-span-6 sm:col-span-3">
+																											<label for="time" class="text-sm">Lugar</label>
+																											<div>
+                                                            <select id="place" name="place" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                                                <option>Casa</option>
+                                                                <option>Trabajo</option>
+                                                                <option>Establecimiento</option>
+                                                             </select>
+                                                      </div>
+																									</div>
+																									<div class="col-span-6 sm:col-span-3">
+																											<label for="time" class="text-sm">Tipo</label>
+																											<div>
+                                                            <select id="type" name="type" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                                               <option>Preparado</option>
+                                                               <option>Comprada</option>
+                                                               <option>Comedor</option>
+                                                             </select>
+                                                        </div>
+																									</div>
+																							</div>
+																										<div class="col-span-6 sm:col-span-3">
+																											<label for="description" class="text-sm mt-4">Descripción</label>
+																											<input type="text" step="any" name="description" id="description"
+																													autocomplete="description"
+																													class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
+																									</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+																		<div class="mt-4">
+                                    <h4>Segunda colación</h4>
+                                     <div class="flex flex-col mt-3">
+                                        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+																						<div class="grid grid-cols-9 gap-6">
+																							<div class="col-span-6 sm:col-span-3">
+																											<label for="time" class="text-sm">Horario</label>
+																											<input type="number" step="any" name="time" id="time"
+																													autocomplete="time"
+																													class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
+																									</div>
+																									<div class="col-span-6 sm:col-span-3">
+																											<label for="time" class="text-sm">Lugar</label>
+																											<div>
+                                                            <select id="place" name="place" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                                                <option>Casa</option>
+                                                                <option>Trabajo</option>
+                                                                <option>Establecimiento</option>
+                                                             </select>
+                                                      </div>
+																									</div>
+																									<div class="col-span-6 sm:col-span-3">
+																											<label for="time" class="text-sm">Tipo</label>
+																											<div>
+                                                            <select id="type" name="type" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                                               <option>Preparado</option>
+                                                               <option>Comprada</option>
+                                                               <option>Comedor</option>
+                                                             </select>
+                                                        </div>
+																									</div>
+																							</div>
+																										<div class="col-span-6 sm:col-span-3 mt-4">
+																											<label for="description" class="text-sm">Descripción</label>
+																											<input type="text" step="any" name="description" id="description"
+																													autocomplete="description"
+																													class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
+																									</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+																		<div class="mt-4">
+                                    <h4>Cena</h4>
+                                     <div class="flex flex-col mt-3">
+                                        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+																						<div class="grid grid-cols-9 gap-6">
+																							<div class="col-span-6 sm:col-span-3">
+																											<label for="time" class="text-sm">Horario</label>
+																											<input type="number" step="any" name="time" id="time"
+																													autocomplete="time"
+																													class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
+																									</div>
+																									<div class="col-span-6 sm:col-span-3">
+																											<label for="time" class="text-sm">Lugar</label>
+																											<div>
+                                                            <select id="place" name="place" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                                                <option>Casa</option>
+                                                                <option>Trabajo</option>
+                                                                <option>Establecimiento</option>
+                                                             </select>
+                                                      </div>
+																									</div>
+																									<div class="col-span-6 sm:col-span-3">
+																											<label for="time" class="text-sm">Tipo</label>
+																											<div>
+                                                            <select id="type" name="type" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                                               <option>Preparado</option>
+                                                               <option>Comprada</option>
+                                                               <option>Comedor</option>
+                                                             </select>
+                                                        </div>
+																									</div>
+																							</div>
+																										<div class="col-span-6 sm:col-span-3 mt-4">
+																											<label for="description" class="text-sm">Descripción</label>
+																											<input type="text" step="any" name="description" id="description"
+																													autocomplete="description"
+																													class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
+																									</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            
+
+														
+
+
                         </div>
                     </div>
                 </div> <!-- fin card dieta habitual-->
 
-            </div>
-
-                                                                <input x-ref="search" x-show="open" x-model="search"
-                                                                    @keydown.enter.stop.prevent="selectOption()"
-                                                                    @keydown.arrow-up.prevent="focusPreviousOption()"
-                                                                    @keydown.arrow-down.prevent="focusNextOption()"
-                                                                    type="search"
-                                                                    class="w-full h-full form-control focus:outline-none" />
 
             <!-- Relación con los alimentos-->
             <div class="bg-gray-100 w-full px-6 py-5">

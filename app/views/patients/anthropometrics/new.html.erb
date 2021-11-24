@@ -6,44 +6,197 @@
             <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
                 <div class="md:grid md:grid-cols-3 md:gap-6">
                     <div class="md:col-span-3">
-                        <h3>Datos generales</h3>
+                        <h3>Medidas básicas</h3>
                         <div class="border-t border-gray-200 px-0 sm:my-4 sm:mx-0"></div>
 
                         <div class="mt-5 md:mt-5 md:col-span-3">
                             <form action="#" method="POST">
                                 <div class="grid grid-cols-9 gap-6">
                                     <div class="col-span-6 sm:col-span-3">
-                                        <label for="size" class="text-sm">Talla (m)</label>
-                                        <input type="number" step="any" name="size" id="size" autocomplete="size"
-                                            class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
-                                    </div>
-
-                                    <div class="col-span-6 sm:col-span-3">
-                                        <label for="weight" class="text-sm">Peso (kg)</label>
-                                        <input type="number" step="any" name="weight" id="weight" autocomplete="weight"
-                                            class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
-                                    </div>
-
-                                    <div class="col-span-6 sm:col-span-3">
-                                        <label for="imc" class="text-sm">IMC (kg/m2)</label>
-
-                                        <h3
-                                            class="mt-1 p-2 h-11 border bg-gray-50 block w-full sm:text-md text-gray-400 border-gray-300 rounded-md">
-                                            0
-                                        </h3>
-
-                                    </div>
-
-                                    <div class="col-span-6 sm:col-span-3">
                                         <label for="normal-weight" class="text-sm">Peso habitual (kg)</label>
                                         <input type="number" step="any" name="normal-weight" id="normal-weight"
                                             autocomplete="normal-weight"
                                             class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
                                     </div>
+                                    
+                                    <div class="col-span-6 sm:col-span-3">
+                                        <label for="size" class="text-sm">Talla (m)</label>
+                                        <input type="number" step="any" name="size" id="size" autocomplete="size"
+                                            class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
+                                    </div>
 
+                                    
+                                </div>
+                                <div class="bg-gray-50 shadow mt-4 sm:rounded-lg sm:p-6 ">
+                                    <div class="grid grid-cols-9 gap-6 ">
+                                        <div class="col-span-6 sm:col-span-3">
+                                            <label for="normal-weight" class="text-sm">Fecha de consulta</label>
+                                            <input type="date" step="any" name="normal-weight" id="normal-weight"
+                                                autocomplete="normal-weight"
+                                                class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+                                        </div>
 
+                                        <div class="col-span-6 sm:col-span-3">
+                                            <label for="weight" class="text-sm">Peso (kg)</label>
+                                            <input type="number" step="any" name="weight" id="weight" autocomplete="weight"
+                                                class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+                                        </div>
+
+                                        <div class="col-span-6 sm:col-span-3 mt-7">
+                                            <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                                Registrar medidas
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </form>
+
+                            <div class="flex flex-col mt-8">
+                                    <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                    <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                                        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                                        <table class="min-w-full divide-y divide-gray-200">
+                                            <thead class="bg-gray-50">
+                                            <tr>
+                                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Consulta
+                                                </th>
+                                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Talla
+                                                </th>
+                                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Peso
+                                                </th>
+                                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                IMC
+                                                </th>
+                                                
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <!-- Odd row -->
+                                            <tr class="bg-white">
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-gray-900">
+                                                18 May 2020
+                                                
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                                1.85
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                                105
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                                30.7
+                                                </td>
+                                                
+                                                <td class="px-6 py-4 whitespace-nowrap text-text-center text-sm font-medium">
+                                                <div class="ml-4 flex-shrink-0 flex space-x-4">
+                                                <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                                </svg>
+                                                </button>
+                                                <span class="text-gray-300" aria-hidden="true">|</span>
+                                                <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                                </svg>
+                                                </button>
+                                            </div>
+                                                </td>
+                                            </tr>
+                                
+                                            <!-- Even row -->
+                                            <tr class="bg-gray-50">
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-center font-medium text-gray-900">
+                                                07 Ago 2020
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                                1.85
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                                90
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                                26.3
+                                                </td>
+                                                
+                                                <td class="px-6 py-4 whitespace-nowrap text-text-center text-sm font-medium">
+                                                <div class="ml-4 flex-shrink-0 flex space-x-4">
+                                                <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                                </svg>
+                                                </button>
+                                                <span class="text-gray-300" aria-hidden="true">|</span>
+                                                <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                                </svg>
+                                                </button>
+                                            </div>
+                                                </td>
+                                            </tr>
+                                
+                                            <!-- Odd row -->
+                                            <tr class="bg-white">
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-center font-medium text-gray-900">
+                                                12 Nov 2021
+                                                
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                                1.85
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                                105
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                                30.7
+                                                </td>
+                                                
+                                                
+                                                <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
+                                                <div class="ml-4 flex-shrink-0 flex space-x-4">
+                                                <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                                </svg>
+                                                </button>
+                                                <span class="text-gray-300" aria-hidden="true">|</span>
+                                                <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                                </svg>
+                                                </button>
+                                            </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="text-right text-sm mt-4 whitespace-nowrap text-gray-500">
+                                 <button type="button" data-action="modal#show"
+                                        class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-full text-black-600 bg-white">
+                                        <!-- Heroicon name: outline/plus -->
+                                        Ver gráfica
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                </button>
+                              
+                                
+                            </div>
+
+                            <a href="#">
+                                <span class="sr-only">Workflow</span>
+                                <%= image_pack_tag "media/images/medidas.png"  %>
+                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -60,7 +213,14 @@
 
                         <div class="mt-5 md:mt-5 md:col-span-3">
                             <form action="#" method="POST">
-                                <div class="grid grid-cols-6 gap-6">
+                            <div class="bg-gray-50 shadow mt-4 sm:rounded-lg sm:p-6 ">
+                                <div class="grid grid-cols-9 gap-6">
+                                 <div class="col-span-6 sm:col-span-3">
+                                            <label for="normal-weight" class="text-sm">Fecha de consulta</label>
+                                            <input type="date" step="any" name="normal-weight" id="normal-weight"
+                                                autocomplete="normal-weight"
+                                                class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
+                                        </div>
                                     <div class="col-span-6 sm:col-span-3">
                                         <label for="waist" class="text-sm">Cintura (cm)</label>
                                         <input type="number" step="any" name="waist" id="waist" autocomplete="waist"
@@ -92,10 +252,192 @@
                                         <input type="number" step="any" name="calf" id="calf" autocomplete="calf"
                                             class="mt-1 p-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border-gray-300 rounded-md">
                                     </div>
+                            
+                                        
+                                </div>
 
-
+                                <div class="grid grid-cols-3 gap-6 item-center ">
+                                <div class="col-span-6 sm:col-span-3 item-center ml-48 mt-4">
+                                            <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                                Registrar circunferencias
+                                            </button>
+                                        </div>
+                                        </div>
                                 </div>
                             </form>
+
+                            <div class="flex flex-col mt-4">
+                                <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                                    <table class="min-w-full divide-y divide-gray-200">
+                                        <thead class="bg-gray-50">
+                                        <tr>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Consulta
+                                            </th>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Cintura
+                                            </th>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Cadera
+                                            </th>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Brazo relajado
+                                            </th>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Brazo contraido
+                                            </th>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Pantorrilla
+                                            </th>
+                                            <th scope="col" class="relative px-6 py-3">
+                                            <span class="sr-only">Edit</span>
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <!-- Odd row -->
+                                        <tr class="bg-white">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-gray-900">
+                                            18 May 2020
+                                            
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            80
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            100
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            25
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            32
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            30
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-text-center text-sm font-medium">
+                                            <div class="ml-4 flex-shrink-0 flex space-x-4">
+                                            <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                            </svg>
+                                            </button>
+                                            <span class="text-gray-300" aria-hidden="true">|</span>
+                                            <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                            </svg>
+                                            </button>
+                                        </div>
+                                            </td>
+                                        </tr>
+                            
+                                        <!-- Even row -->
+                                        <tr class="bg-gray-50">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center font-medium text-gray-900">
+                                            07 Ago 2020
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            95
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            98
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            27
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            36
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            39
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-text-center text-sm font-medium">
+                                            <div class="ml-4 flex-shrink-0 flex space-x-4">
+                                            <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                            </svg>
+                                            </button>
+                                            <span class="text-gray-300" aria-hidden="true">|</span>
+                                            <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                            </svg>
+                                            </button>
+                                        </div>
+                                            </td>
+                                        </tr>
+                            
+                                        <!-- Odd row -->
+                                        <tr class="bg-white">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center font-medium text-gray-900">
+                                            12 Nov 2021
+                                            
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            62.7
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center  text-gray-500">
+                                            95
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            23
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            32
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            35
+                                            </td>
+                                            
+                                            <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
+                                            <div class="ml-4 flex-shrink-0 flex space-x-4">
+                                            <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                            </svg>
+                                            </button>
+                                            <span class="text-gray-300" aria-hidden="true">|</span>
+                                            <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                            </svg>
+                                            </button>
+                                        </div>
+                                            </td>
+                                        </tr>
+                            
+                                        <!-- More people... -->
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="text-right text-sm mt-4 whitespace-nowrap text-gray-500">
+                                 <button type="button" data-action="modal#show"
+                                        class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-full text-black-600 bg-white">
+                                        <!-- Heroicon name: outline/plus -->
+                                        Ver gráfica
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                </button>
+                              
+                                
+                            </div>
+
+                            <a href="#">
+                                <span class="sr-only">Workflow</span>
+                                <%= image_pack_tag "media/images/circunferencia.png"  %>
+                            </a>
+
+
                         </div>
                     </div>
                 </div>
@@ -111,20 +453,22 @@
 
                         <div class="mt-5 md:mt-5 md:col-span-3">
                             <form action="#" method="POST">
-                                <div class="grid grid-cols-6 gap-6">
+                            <div class="bg-gray-50 shadow mt-4 sm:rounded-lg sm:p-6 ">
+                                <div class="grid grid-cols-9 gap-6">
                                     <div class="col-span-6 sm:col-span-3">
+                                        <label for="date" class="text-sm">Fecha de consulta</label>
+                                        <input type="date" step="any" name="date" id="date"
+                                            autocomplete="date"
+                                            class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-9 gap-6 mt-4">
+                                    <div class="col-span-6 sm:col-span-3 ">
                                         <label for="fat-percentage" class="text-sm">Porcentaje de grasa (%)</label>
                                         <input type="number" step="any" name="fat-percentage" id="fat-percentage"
                                             autocomplete="fat-percentage"
                                             class="mt-1 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-md border border-gray-300 rounded-md">
-                                    </div>
-
-                                    <div class="col-span-6 sm:col-span-3">
-                                        <label for="kg-fat" class="text-sm">Kg de grasa*</label>
-                                        <h3
-                                            class="mt-1 p-2 h-11 border bg-gray-50 block w-full sm:text-md text-gray-400 border-gray-300 rounded-md">
-                                            0%
-                                        </h3>
                                     </div>
 
                                     <div class="col-span-6 sm:col-span-3">
@@ -142,22 +486,177 @@
                                     </div>
                                 </div>
 
-                                <div class="col-span-6 sm:col-span-4 mt-8">
-                                    <label for="bioimpedance" class="text-sm">Bioimpedancia</label>
-                                    <button type="button"
-                                        class="relative block w-full border-2 border-gray-300 border-dashed rounded-lg p-2 text-center hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-1">
-                                        <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor" aria-hidden="true">
-                                            <path vector-effect="non-scaling-stroke" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2"
-                                                d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-                                        </svg>
-                                        <span class="mt-2 block text-sm font-medium text-gray-900">
-                                            Agregar archivo
-                                        </span>
-                                    </button>
+                                <div class="grid grid-cols-3 gap-6 item-center ">
+                                    <div class="col-span-6 sm:col-span-3 item-center ml-48 mt-4">
+                                            <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                                Registrar composición
+                                            </button>
+                                    </div>
+                                </div>
+
                                 </div>
                             </form>
+
+                            <div class="flex flex-col mt-4">
+                                <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                                    <table class="min-w-full divide-y divide-gray-200">
+                                        <thead class="bg-gray-50">
+                                        <tr>
+                                            <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Consulta
+                                            </th>
+                                            <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Porcentaje de grasa
+                                            </th>
+                                            <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Kg de grasa
+                                            </th>
+                                            <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Masa muscular
+                                            </th>
+                                            <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Agua corporal
+                                            </th>
+                                            <th scope="col" class="relative px-6 py-3">
+                                            <span class="sr-only">Edit</span>
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <!-- Odd row -->
+                                        <tr class="bg-white">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-gray-900">
+                                            18 May 2020
+                                            
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            32
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            20
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            18
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            32
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-text-center text-sm font-medium">
+                                            <div class="ml-4 flex-shrink-0 flex space-x-4">
+                                            <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                            </svg>
+                                            </button>
+                                            <span class="text-gray-300" aria-hidden="true">|</span>
+                                            <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                            </svg>
+                                            </button>
+                                        </div>
+                                            </td>
+                                        </tr>
+                            
+                                        <!-- Even row -->
+                                        <tr class="bg-gray-50">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center font-medium text-gray-900">
+                                            07 Ago 2020
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            30
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            22.5
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            20
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            33
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-text-center text-sm font-medium">
+                                            <div class="ml-4 flex-shrink-0 flex space-x-4">
+                                            <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                            </svg>
+                                            </button>
+                                            <span class="text-gray-300" aria-hidden="true">|</span>
+                                            <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                            </svg>
+                                            </button>
+                                        </div>
+                                            </td>
+                                        </tr>
+                            
+                                        <!-- Odd row -->
+                                        <tr class="bg-white">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center font-medium text-gray-900">
+                                            12 Nov 2021
+                                            
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            26
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center  text-gray-500">
+                                            17
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            25
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
+                                            36
+                                            </td>
+                                            
+                                            <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
+                                            <div class="ml-4 flex-shrink-0 flex space-x-4">
+                                            <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                            </svg>
+                                            </button>
+                                            <span class="text-gray-300" aria-hidden="true">|</span>
+                                            <button type="button" class="bg-white rounded-md font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                            </svg>
+                                            </button>
+                                        </div>
+                                            </td>
+                                        </tr>
+                            
+                                        <!-- More people... -->
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                             <div class="text-right text-sm mt-4 whitespace-nowrap text-gray-500">
+                                 <button type="button" data-action="modal#show"
+                                        class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-full text-black-600 bg-white">
+                                        <!-- Heroicon name: outline/plus -->
+                                        Ver gráfica
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                </button>
+                              
+                                
+                            </div>
+
+                            <a href="#">
+                                <span class="sr-only">Workflow</span>
+                                <%= image_pack_tag "media/images/composicion.png"  %>
+                            </a>
+
+
                         </div>
                     </div>
                 </div>
